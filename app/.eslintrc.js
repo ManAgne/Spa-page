@@ -19,8 +19,8 @@ module.exports = {
     ],
     "rules": {
         "react/prop-types": [0],
-        "eol-last": [1],
-        "no-multiple-empty-lines": [1, { max: 1 }],
+        "newline-before-return": [1],
+        "import/prefer-default-export": [0],
         "react/function-component-definition": [1, {
             "namedComponents": "arrow-function"
         }]
