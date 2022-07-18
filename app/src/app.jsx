@@ -4,7 +4,7 @@ import {
   Routes,
   Route
 } from 'react-router-dom';
-import Navbar from '../src/components/navbar';
+import NavBar from '../src/components/navbar';
 import HomePage from './pages/home-page';
 import TreatmentsPage from './pages/treatments-page';
 import CosmeticsPage from './pages/cosmetics-page';
@@ -14,7 +14,7 @@ import ErrorPage from './pages/error-page';
 const App = () => {
   return (
     <BrowserRouter>
-      <Navbar />
+      <NavBar />
 
       <Routes>
         <Route path="/" element={<HomePage />} />

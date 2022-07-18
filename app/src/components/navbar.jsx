@@ -6,8 +6,10 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+import { useNavigate } from 'react-router-dom';
 
 const NavBar = () => {
+  const navigate = useNavigate();
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -29,6 +31,7 @@ const NavBar = () => {
            size="large"
            edge="end"
            color="inherit"
+           onClick={() => navigate('/cart')}
           >
            <ShoppingBagIcon />
           </IconButton>
