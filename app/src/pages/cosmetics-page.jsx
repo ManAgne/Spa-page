@@ -1,9 +1,7 @@
-import * as React from 'react'
+import * as React from 'react';
 
-const CosmeticsPage = () => {
-  return (
-    <div>CosmeticsPage</div>
-  )
-}
+const CosmeticsPage = () => (
+  <div>CosmeticsPage</div>
+);
 
-export default CosmeticsPage
+export default CosmeticsPage;

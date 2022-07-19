@@ -25,7 +25,7 @@ const NavBar = () => {
             size="large"
             edge="start"
             color="inherit"
-            sx={{ display: { sm: 'none '} }}
+            sx={{ display: { sm: 'none ' } }}
           >
             <MenuIcon />
           </IconButton>
@@ -35,17 +35,17 @@ const NavBar = () => {
           </Box>
 
           <IconButton
-           size="large"
-           edge="end"
-           color="inherit"
-           onClick={() => navigate('/cart')}
+            size="large"
+            edge="end"
+            color="inherit"
+            onClick={() => navigate('/cart')}
           >
-           <ShoppingBagIcon />
+            <ShoppingBagIcon />
           </IconButton>
         </Toolbar>
       </AppBar>
     </Box>
   );
-}
+};
 
-export default NavBar
+export default NavBar;
