@@ -9,6 +9,7 @@ import HomePage from './pages/home-page';
 import TreatmentsPage from './pages/treatments-page';
 import CosmeticsPage from './pages/cosmetics-page';
 import CartPage from './pages/cart-page';
+import OnlineReservationPage from './pages/online-reservation-page';
 import ErrorPage from './pages/error-page';
 
 const App = () => (
@@ -20,6 +21,7 @@ const App = () => (
       <Route path="/treatments" element={<TreatmentsPage />} />
       <Route path="/cosmetics" element={<CosmeticsPage />} />
       <Route path="/cart" element={<CartPage />} />
+      <Route path="/reservation" element={<OnlineReservationPage />} />
 
       <Route path="*" element={<ErrorPage />} />
     </Routes>
