@@ -10,7 +10,8 @@ import {
 
 const procedures = [
   {
-    massage: 'thai massage',
+    value: 'thai massage',
+    label: 'thai massage',
   },
 ];
 
