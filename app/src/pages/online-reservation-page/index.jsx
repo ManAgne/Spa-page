@@ -8,22 +8,9 @@ import {
   MenuItem,
 } from '@mui/material';
 
-const services = [
+const procedures = [
   {
-    value: 'USD',
-    label: '$',
-  },
-  {
-    value: 'EUR',
-    label: '€',
-  },
-  {
-    value: 'BTC',
-    label: '฿',
-  },
-  {
-    value: 'JPY',
-    label: '¥',
+    massage: 'thai massage',
   },
 ];
 
@@ -31,7 +18,7 @@ const OrderPage = () => {
   const [name, setName] = React.useState('');
   const [email, setEmail] = React.useState('');
   const [phone, setPhone] = React.useState('');
-  const [service, setService] = React.useState('');
+  const [procedure, setProcedure] = React.useState('');
 
   return (
     <Box sx={{ pt: 7, display: 'flex', flexDirection: 'column' }}>
@@ -60,7 +47,6 @@ const OrderPage = () => {
           width: 500,
           mx: 'auto',
           bgcolor: 'white',
-          opacity: '2',
           zIndex: 1,
         }}
       >
@@ -74,15 +60,15 @@ const OrderPage = () => {
           }}
         >
           <TextField
-            name="service"
+            name="procedure"
             select
-            label="Choose service"
+            label="Choose a procedure"
             variant="filled"
-            onChange={(event) => setService(event.target.value)}
-            value={service}
+            onChange={(event) => setProcedure(event.target.value)}
+            value={procedure}
             fullWidth
           >
-            {services.map(
+            {procedures.map(
               ({ value, label }) => <MenuItem key={value} value={value}>{label}</MenuItem>,
             )}
           </TextField>

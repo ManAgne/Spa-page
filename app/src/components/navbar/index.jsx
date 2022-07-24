@@ -12,6 +12,7 @@ const pages = [
   { text: 'Home', to: '/' },
   { text: 'Treatments', to: '/treatments' },
   { text: 'Cosmetics', to: '/cosmetics' },
+  { text: 'Online reservation', to: '/reservation' },
 ];
 
 const NavBar = () => {
