@@ -1,9 +1,13 @@
 import * as React from 'react';
 import { Box, Grid } from '@mui/material';
 import ProductCard from './components/product-card';
+import CartContext from '../../contexts/cart-context';
 
 const CosmeticsPage = () => {
+  const cartContext = React.useContext(CartContext);
   const [products, setProducts] = React.useState([]);
+
+  console.log('CosmeticsPage, cartContextValue:', cartContext);
 
   React.useEffect(() => {
     fetch('http://localhost:8000/products')

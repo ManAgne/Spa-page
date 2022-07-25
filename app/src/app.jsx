@@ -11,20 +11,23 @@ import CosmeticsPage from './pages/cosmetics-page';
 import CartPage from './pages/cart-page';
 import OnlineReservationPage from './pages/online-reservation-page';
 import ErrorPage from './pages/error-page';
+import CartContext from './contexts/cart-context';
 
 const App = () => (
   <BrowserRouter>
-    <NavBar />
+    <CartContext.Provider value={6}>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/treatments" element={<TreatmentsPage />} />
+        <Route path="/cosmetics" element={<CosmeticsPage />} />
+        <Route path="/cart" element={<CartPage />} />
+        <Route path="/reservation" element={<OnlineReservationPage />} />
 
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/treatments" element={<TreatmentsPage />} />
-      <Route path="/cosmetics" element={<CosmeticsPage />} />
-      <Route path="/cart" element={<CartPage />} />
-      <Route path="/reservation" element={<OnlineReservationPage />} />
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
 
-      <Route path="*" element={<ErrorPage />} />
-    </Routes>
+    </CartContext.Provider>
   </BrowserRouter>
 );
 
