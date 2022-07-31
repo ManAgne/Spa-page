@@ -21,12 +21,14 @@ const CosmeticsPage = () => {
         {products.map(({
           id,
           title,
+          price,
           img,
         }) => (
           <Grid item xs={6} md={4} lg={3} sx={{ gridAutoRows: 'max-content' }}>
             <ProductCard
-              id={id}
+              key={id}
               title={title}
+              price={price}
               img={img}
             />
           </Grid>

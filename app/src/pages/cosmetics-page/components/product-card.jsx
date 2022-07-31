@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 
 const ProductCard = ({
   title,
-  description,
+  price,
   img,
 }) => (
   <Card sx={{
@@ -22,11 +22,13 @@ const ProductCard = ({
       alt=""
     />
     <CardContent>
-      <Typography gutterBottom variant="h5" component="div">
+      <Typography gutterBottom variant="h5" component="div" textAlign="center">
         {title}
       </Typography>
-      <Typography variant="body2" color="text.secondary">
-        {description}
+      <Typography variant="h4" component="div" color="text.secondary" textAlign="center">
+        {price}
+        {' '}
+        €
       </Typography>
     </CardContent>
     <CardActions sx={{ display: 'flex', justifyContent: 'space-between' }}>
