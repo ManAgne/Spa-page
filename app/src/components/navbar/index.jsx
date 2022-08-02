@@ -5,6 +5,7 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 import { useNavigate } from 'react-router-dom';
 import * as Nav from './components';
 
@@ -35,14 +36,28 @@ const NavBar = () => {
             {pages.map(({ text, to }) => <Nav.Link key={to} to={to}>{text}</Nav.Link>)}
           </Box>
 
-          <IconButton
-            size="large"
-            edge="end"
-            color="inherit"
-            onClick={() => navigate('/cart')}
-          >
-            <ShoppingBagIcon />
-          </IconButton>
+          <Box>
+
+            <IconButton
+              size="large"
+              edge="start"
+              color="inherit"
+              onClick={() => navigate('/wishlist')}
+            >
+              <FavoriteIcon />
+            </IconButton>
+
+            <IconButton
+              size="large"
+              edge="end"
+              color="inherit"
+              onClick={() => navigate('/cart')}
+            >
+              <ShoppingBagIcon />
+            </IconButton>
+
+          </Box>
+
         </Toolbar>
       </AppBar>
     </Box>
