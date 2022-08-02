@@ -7,7 +7,6 @@ import {
   Button,
   MenuItem,
 } from '@mui/material';
-import CartContext from '../../contexts/cart-context';
 
 const procedures = [
   {
@@ -17,13 +16,10 @@ const procedures = [
 ];
 
 const OrderPage = () => {
-  const cartContext = React.useContext(CartContext);
   const [name, setName] = React.useState('');
   const [email, setEmail] = React.useState('');
   const [phone, setPhone] = React.useState('');
   const [procedure, setProcedure] = React.useState('');
-
-  console.log('OrderPage, cartContextValue:', cartContext);
 
   return (
     <Box sx={{ pt: 7, display: 'flex', flexDirection: 'column' }}>

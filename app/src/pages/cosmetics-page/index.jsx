@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Box, Grid } from '@mui/material';
+import Filter from './components/filter';
 import ProductCard from './components/product-card';
 import CartContext from '../../contexts/cart-context';
 
@@ -16,8 +17,9 @@ const CosmeticsPage = () => {
   }, []);
 
   return (
-    <Box sx={{ p: 3 }}>
-      <Grid container spacing={2}>
+    <Box sx={{ display: 'flex', py: 3 }}>
+      <Filter />
+      <Grid container spacing={3} sx={{ px: 5 }}>
         {products.map(({
           id,
           title,
