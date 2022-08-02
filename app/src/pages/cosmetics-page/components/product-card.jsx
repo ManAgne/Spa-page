@@ -19,13 +19,13 @@ const ProductCard = ({
       component="img"
       width="100%"
       image={img}
-      alt=""
+      alt={title}
     />
     <CardContent>
-      <Typography gutterBottom variant="h5" component="div" textAlign="center">
+      <Typography gutterBottom variant="h6" component="div" sx={{ textAlign: 'center', minHeight: '64px' }}>
         {title}
       </Typography>
-      <Typography variant="h4" component="div" color="text.secondary" textAlign="center">
+      <Typography variant="h5" component="div" color="text.secondary" textAlign="center">
         {price}
         {' '}
         €
