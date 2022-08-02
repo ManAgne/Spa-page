@@ -27,7 +27,7 @@ const productTypes = [
 const Filter = () => {
   const [priceRange, setPriceRange] = React.useState([1, 50]);
   const [category, setCategory] = React.useState(null);
-  const [selectedSkinTypes, setSelectedSkinTypes] = React.useState([]);
+  const [SkinType, setSkinType] = React.useState([]);
   const [selectedProductTypes, setSelectedProductTypes] = React.useState([]);
 
   return (
@@ -72,13 +72,32 @@ const Filter = () => {
         )}
       />
       <Divider sx={{ my: 2 }} />
-      <CheckboxGroup
-        label="Skin type"
+
+      <Autocomplete
+        disablePortal
         options={skinTypes}
-        value={selectedSkinTypes}
-        onChange={(_, newSkinTypes) => setSelectedSkinTypes(newSkinTypes)}
+        sx={{ width: '100%' }}
+        value={SkinType}
+        onChange={(_, newSkinType) => setSkinType(newSkinType)}
+        renderInput={({
+          InputLabelProps,
+          InputProps,
+          inputProps,
+          fullWidth,
+          id,
+        }) => (
+          <TextField
+            label="Skin type"
+            InputLabelProps={InputLabelProps}
+            InputProps={InputProps}
+            fullWidth={fullWidth}
+            id={id}
+            inputProps={inputProps}
+          />
+        )}
       />
       <Divider sx={{ my: 2 }} />
+
       <CheckboxGroup
         label="Product type"
         options={productTypes}
