@@ -1,6 +1,12 @@
 import * as React from 'react';
 import {
-  Box, Typography, Divider, Autocomplete, Slider, FormControl, TextField,
+  Autocomplete,
+  Box,
+  Divider,
+  FormControl,
+  Slider,
+  Typography,
+  TextField,
 } from '@mui/material';
 import CheckboxGroup from '../../../components/checkbox-group';
 
