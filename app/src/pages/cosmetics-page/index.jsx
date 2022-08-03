@@ -1,14 +1,9 @@
 import * as React from 'react';
 import { Box, Grid } from '@mui/material';
-import Filter from './components/filter';
 import ProductCard from './components/product-card';
-import CartContext from '../../contexts/cart-context';
 
 const CosmeticsPage = () => {
-  const cartContext = React.useContext(CartContext);
   const [products, setProducts] = React.useState([]);
-
-  console.log('CosmeticsPage, cartContextValue:', cartContext);
 
   React.useEffect(() => {
     fetch('http://localhost:8000/products')
@@ -18,7 +13,6 @@ const CosmeticsPage = () => {
 
   return (
     <Box sx={{ display: 'flex', py: 3 }}>
-      <Filter />
       <Grid container spacing={3} sx={{ px: 5 }}>
         {products.map(({
           id,
@@ -26,9 +20,9 @@ const CosmeticsPage = () => {
           price,
           img,
         }) => (
-          <Grid item xs={6} md={4} lg={3} sx={{ gridAutoRows: 'max-content' }}>
+          <Grid key={id} item xs={6} md={4} lg={3} sx={{ gridAutoRows: 'max-content' }}>
             <ProductCard
-              key={id}
+              id={id}
               title={title}
               price={price}
               img={img}

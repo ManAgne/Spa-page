@@ -14,23 +14,32 @@ import OnlineReservationPage from './pages/online-reservation-page';
 import ErrorPage from './pages/error-page';
 import CartContext from './contexts/cart-context';
 
-const App = () => (
-  <BrowserRouter>
-    <CartContext.Provider value={6}>
-      <NavBar />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/treatments" element={<TreatmentsPage />} />
-        <Route path="/cosmetics" element={<CosmeticsPage />} />
-        <Route path="/reservation" element={<OnlineReservationPage />} />
-        <Route path="/wishlist" element={<WishlistPage />} />
-        <Route path="/cart" element={<CartPage />} />
+const App = () => {
+  const [cartItems, setCartItems] = React.useState([]);
 
-        <Route path="*" element={<ErrorPage />} />
-      </Routes>
+  const cartContextValue = React.useMemo(() => ({
+    cartItems,
+    addToCart: (itemId) => setCartItems([...cartItems, itemId]),
+  }), [cartItems]);
 
-    </CartContext.Provider>
-  </BrowserRouter>
-);
+  return (
+    <BrowserRouter>
+      <CartContext.Provider value={cartContextValue}>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/treatments" element={<TreatmentsPage />} />
+          <Route path="/cosmetics" element={<CosmeticsPage />} />
+          <Route path="/reservation" element={<OnlineReservationPage />} />
+          <Route path="/wishlist" element={<WishlistPage />} />
+          <Route path="/cart" element={<CartPage />} />
+
+          <Route path="*" element={<ErrorPage />} />
+        </Routes>
+
+      </CartContext.Provider>
+    </BrowserRouter>
+  );
+};
 
 export default App;
