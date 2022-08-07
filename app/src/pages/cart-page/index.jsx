@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Box } from '@mui/material';
-import CartContext from '../contexts/cart-context';
+import CartContext from '../../contexts/cart-context';
 
 const CartPage = () => {
   const { cartItems } = React.useContext(CartContext);
