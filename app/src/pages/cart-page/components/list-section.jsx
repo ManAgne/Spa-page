@@ -74,8 +74,8 @@ const ListSection = () => {
         </Box>
         <Box sx={{ alignSelf: 'center' }}>50 €</Box>
       </Box>
-      <Divider sx={{ mt: 1 }} />
-      <Typography />
+      <Divider sx={{ m: 1 }} />
+      <Typography variant="h6" sx={{ textAlign: 'right' }}>Subtotal: 50 €</Typography>
     </Box>
   );
 };
