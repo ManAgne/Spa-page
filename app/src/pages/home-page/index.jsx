@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link as RouterLink } from 'react-router-dom';
 import {
   Box,
   Typography,
@@ -6,8 +7,15 @@ import {
   Card,
   CardContent,
   CardMedia,
+  styled,
 } from '@mui/material';
 import SpaTwoToneIcon from '@mui/icons-material/SpaTwoTone';
+
+const Link = styled(RouterLink)({
+  textDecoration: 'none',
+  display: 'flex',
+  flexDirection: 'column',
+});
 
 const HomePage = () => (
   <Box sx={{ height: '100vh', display: 'flex' }}>
@@ -45,46 +53,50 @@ const HomePage = () => (
         display: 'flex', alignSelf: 'flex-end', mx: '10vw', mt: '80px', gap: '20px',
       }}
       >
-        <Card sx={{ maxWidth: 300 }}>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              height="170"
-              image="img-treatments.jpg"
-              alt="treatments"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Treatments
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Est debitis laudantium voluptatibus natus voluptatem.
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-        <Card sx={{ maxWidth: 300 }}>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              height="170"
-              image="img-cosmetics.jpg"
-              alt="cosmetics"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Cosmetics
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, dolor.
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
+        <Link to="treatments">
+          <Card sx={{ maxWidth: 300 }}>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                height="170"
+                image="img-treatments.jpg"
+                alt="treatments"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  Treatments
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Est debitis laudantium voluptatibus natus voluptatem.
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
+        </Link>
+        <Link to="/cosmetics">
+          <Card sx={{ maxWidth: 300 }}>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                height="170"
+                image="img-cosmetics.jpg"
+                alt="cosmetics"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  Cosmetics
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Molestiae, dolor. Lorem ipsum dolor sit amet.
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
+        </Link>
       </Box>
     </Box>
   </Box>
 );
-
 export default HomePage;
