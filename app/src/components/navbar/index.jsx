@@ -5,7 +5,7 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
-import FavoriteRoundedIcon from '@mui/icons-material/Favorite';
+import FavoriteRoundedIcon from '@mui/icons-material/FavoriteRounded';
 import { useNavigate } from 'react-router-dom';
 import * as Nav from './components';
 
