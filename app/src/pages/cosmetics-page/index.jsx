@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Box, Grid } from '@mui/material';
-import ProductCard from './components/product-card';
+import { ProductCard } from './components';
 
 const CosmeticsPage = () => {
   const [products, setProducts] = React.useState([]);
@@ -13,6 +13,7 @@ const CosmeticsPage = () => {
 
   return (
     <Box sx={{ display: 'flex', py: 3 }}>
+      {/* <Filter /> */}
       <Grid container spacing={3} sx={{ px: 5 }}>
         {products.map(({
           id,

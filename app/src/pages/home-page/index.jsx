@@ -30,7 +30,7 @@ const HomePage = () => (
         }}
       >
         Lotus
-        <SpaTwoToneIcon sx={{ fontSize: '60px', mr: 3, ml: 2 }} />
+        <SpaTwoToneIcon sx={{ fontSize: '60px', mr: 3, ml: 1 }} />
         Spa
       </Typography>
       <Typography component="p" sx={{ color: 'white', width: '80vw', textAlign: 'justify' }}>
@@ -51,7 +51,7 @@ const HomePage = () => (
               component="img"
               height="170"
               image="img-treatments.jpg"
-              alt="green iguana"
+              alt="treatments"
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
@@ -70,7 +70,7 @@ const HomePage = () => (
               component="img"
               height="170"
               image="img-cosmetics.jpg"
-              alt="green iguana"
+              alt="cosmetics"
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
