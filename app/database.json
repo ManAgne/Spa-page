@@ -7,7 +7,8 @@
 			"category": "face",
             "type": "moisturiser",
 			"price": "36",
-			"img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226493-2104858624896150.jpg"
+			"img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226493-2104858624896150.jpg",
+			"liked": true
 		},
 		{
 			"id": "f_moist_2",
@@ -16,7 +17,8 @@
 			"category": "face",
             "type": "moisturiser",
 			"price": "42",
-			"img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226503-1944858828507032.jpg"
+			"img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226503-1944858828507032.jpg",
+			"liked": false
 		},
 		{
 			"id": "f_moist_3",
@@ -25,7 +27,8 @@
 			"category": "face",
             "type": "moisturiser",
 			"price": "36",
-			"img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226495-1204768401944547.jpg"
+			"img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226495-1204768401944547.jpg",
+			"liked": false
 		},
 		{
 			"id": "f_serum_4",
@@ -34,7 +37,8 @@
 			"category": "face",
             "type": "serum",
 			"price": "37",
-			"img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226536-1294768405896744.jpg"
+			"img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226536-1294768405896744.jpg",
+			"liked": false
 		},
 		{
 			"id": "f_serum_5",
@@ -43,7 +47,8 @@
 			"category": "face",
             "type": "serum",
 			"price": "45",
-			"img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226501-5134858828395924.jpg"
+			"img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226501-5134858828395924.jpg",
+			"liked": false
 		},
 		{
 			"id": "f_serum_6",
@@ -52,7 +57,8 @@
 			"category": "face",
             "type": "serum",
 			"price": "37",
-			"img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12595874-1204840384746024.jpg"
+			"img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12595874-1204840384746024.jpg",
+			"liked": false
 		},
 		{
 			"id": "f_mask_7",
@@ -61,7 +67,8 @@
 			"category": "face",
             "type": "mask",
 			"price": "30",
-			"img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12595883-9264840384960656.jpg"
+			"img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12595883-9264840384960656.jpg",
+			"liked": false
 		},
 		{
 			"id": "f_mask_8",
@@ -70,7 +77,8 @@
 			"category": "face",
             "type": "mask",
 			"price": "32",
-			"img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226487-7224768400982303.jpg"
+			"img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226487-7224768400982303.jpg",
+			"liked": false
 		},
 		{
 			"id": "f_mask_9",
@@ -79,7 +87,8 @@
 			"category": "face",
             "type": "mask",
 			"price": "34",
-			"img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12595885-2124907549317377.jpg"
+			"img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12595885-2124907549317377.jpg",
+			"liked": false
 		},
 		{
 			"id": "b_exfo_10",
@@ -88,7 +97,8 @@
 			"category": "body",
             "type": "exfoliator",
 			"price": "28",
-			"img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226505-1944858625105160.jpg"
+			"img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226505-1944858625105160.jpg",
+			"liked": false
 		},
 		{
 			"id": "b_exfo_11",
@@ -97,7 +107,8 @@
 			"category": "body",
             "type": "exfoliator",
 			"price": "28",
-			"img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226535-9534788608232561.jpg"
+			"img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226535-9534788608232561.jpg",
+			"liked": false
 		},
 		{
 			"id": "b_exfo_12",
@@ -106,7 +117,8 @@
 			"category": "body",
             "type": "exfoliator",
 			"price": "30",
-			"img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226497-8984858624930659.jpg"
+			"img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226497-8984858624930659.jpg",
+			"liked": false
 		},
 		{
 			"id": "b_moist_13",
@@ -115,7 +127,8 @@
 			"category": "body",
             "type": "moisturiser",
 			"price": "30",
-			"img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226547-1304911467559639.jpg"
+			"img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226547-1304911467559639.jpg",
+			"liked": false
 		},
 		{
 			"id": "b_moist_14",
@@ -124,7 +137,8 @@
 			"category": "body",
             "type": "moisturiser",
 			"price": "30",
-			"img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226516-1404768403621235.jpg"
+			"img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226516-1404768403621235.jpg",
+			"liked": false
 		},
 		{
 			"id": "b_moist_15",
@@ -133,7 +147,8 @@
 			"category": "body",
             "type": "moisturiser",
 			"price": "30",
-			"img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226508-9464768403240793.jpg"
+			"img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226508-9464768403240793.jpg",
+			"liked": false
 		},
 		{
 			"id": "b_oil_16",
@@ -142,7 +157,8 @@
 			"category": "body",
             "type": "oil",
 			"price": "28",
-			"img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12062213-3934947263603745.jpg"
+			"img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12062213-3934947263603745.jpg",
+			"liked": false
 		},
 		{
 			"id": "b_oil_17",
@@ -151,7 +167,8 @@
 			"category": "body",
             "type": "oil",
 			"price": "26",
-			"img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12589971-1024942865333355.jpg"
+			"img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12589971-1024942865333355.jpg",
+			"liked": false
 		},
 		{
 			"id": "b_oil_18",
@@ -160,7 +177,8 @@
 			"category": "body",
             "type": "oil",
 			"price": "26",
-			"img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12589970-7994942865240184.jpg"
+			"img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12589970-7994942865240184.jpg",
+			"liked": false
 		}
 	]
 }

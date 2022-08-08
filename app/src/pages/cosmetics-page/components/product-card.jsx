@@ -1,10 +1,15 @@
 import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+import {
+  Card,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Button,
+  Typography,
+  IconButton,
+} from '@mui/material';
+import FavoriteRoundedIcon from '@mui/icons-material/FavoriteRounded';
+import FavoriteBorderRoundedIcon from '@mui/icons-material/FavoriteBorderRounded';
 import CartContext from '../../../contexts/cart-context';
 
 const ProductCard = ({
@@ -12,14 +17,22 @@ const ProductCard = ({
   title,
   price,
   img,
+  liked,
+  updateProduct,
 }) => {
   const { addToCart } = React.useContext(CartContext);
 
   return (
     <Card sx={{
-      height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-around',
+      height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-around', position: 'relative',
     }}
     >
+      <IconButton
+        sx={{ position: 'absolute', top: 16, right: 16 }}
+        onClick={() => updateProduct({ id, liked: !liked })}
+      >
+        {liked ? <FavoriteRoundedIcon color="primary" /> : <FavoriteBorderRoundedIcon color="primary" />}
+      </IconButton>
       <CardMedia
         component="img"
         width="100%"
