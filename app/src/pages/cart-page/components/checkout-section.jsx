@@ -6,12 +6,12 @@ import Image from '../../../components/image';
 
 const CheckoutSection = () => (
   <Box sx={{
-    display: 'flex', flexDirection: 'column', bgcolor: 'white', width: '40%', m: 1, p: 5, borderRadius: 1,
+    display: 'flex', flexDirection: 'column', bgcolor: 'white', width: '30%', m: 1, p: 5, borderRadius: 1,
   }}
   >
     <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
-      <Typography variant="h4">Total</Typography>
-      <Typography variant="h4">55 €</Typography>
+      <Typography variant="h5" sx={{ fontWeight: 'bold' }}>Total</Typography>
+      <Typography variant="h5" sx={{ fontWeight: 'bold' }}>55 €</Typography>
     </Box>
     <Divider sx={{ m: 1 }} />
     <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
