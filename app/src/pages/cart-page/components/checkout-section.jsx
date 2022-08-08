@@ -11,12 +11,12 @@ const CheckoutSection = () => (
   >
     <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
       <Typography variant="h5" sx={{ fontWeight: 'bold' }}>Total</Typography>
-      <Typography variant="h5" sx={{ fontWeight: 'bold' }}>55 €</Typography>
+      <Typography variant="h5" sx={{ fontWeight: 'bold' }}>41 €</Typography>
     </Box>
     <Divider sx={{ m: 1 }} />
     <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
       <Typography variant="h6">Subtotal</Typography>
-      <Typography variant="h6">50 €</Typography>
+      <Typography variant="h6">36 €</Typography>
     </Box>
     <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
       <Typography variant="h6">Delivery</Typography>

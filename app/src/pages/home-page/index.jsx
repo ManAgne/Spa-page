@@ -1,8 +1,13 @@
 import * as React from 'react';
-import { Box, Typography, CardActionArea } from '@mui/material';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
+import {
+  Box,
+  Typography,
+  CardActionArea,
+  Card,
+  CardContent,
+  CardMedia,
+} from '@mui/material';
+import SpaTwoToneIcon from '@mui/icons-material/SpaTwoTone';
 
 const HomePage = () => (
   <Box sx={{ height: '100vh', display: 'flex' }}>
@@ -24,7 +29,9 @@ const HomePage = () => (
           color: 'white', textAlign: 'center', my: '30px', textShadow: '2px 2px 2px #21313e', letterSpacing: '15px',
         }}
       >
-        Lotus Spa
+        Lotus
+        <SpaTwoToneIcon sx={{ fontSize: '60px', mr: 3, ml: 2 }} />
+        Spa
       </Typography>
       <Typography component="p" sx={{ color: 'white', width: '80vw', textAlign: 'justify' }}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit.Quos ratione
