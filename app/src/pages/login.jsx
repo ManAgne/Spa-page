@@ -1,7 +1,12 @@
-import {
-  Box, Button, Link, Paper, TextField, Typography,
-} from '@mui/material';
 import * as React from 'react';
+import { Link as RouterLink } from 'react-router-dom';
+import {
+  Box,
+  Button,
+  Paper,
+  TextField,
+  Typography,
+} from '@mui/material';
 import BackgroundImage from '../components/background-image';
 import PageTitle from '../components/page-title';
 
@@ -47,13 +52,12 @@ const Login = () => (
         <Typography variant="body2">
           Do not have an account yet? Register
           {' '}
-          <Link to="/register">here</Link>
+          <RouterLink to="/register">here</RouterLink>
           .
 
         </Typography>
       </Box>
     </Paper>
-
   </Box>
 );
 

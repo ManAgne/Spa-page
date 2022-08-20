@@ -22,14 +22,22 @@ const HomePage = () => (
   <Box sx={{ height: '100vh', display: 'flex' }}>
     <BackgroundImage />
     <Box sx={{
-      display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100vw', zIndex: 1,
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      width: '100vw',
+      zIndex: 1,
     }}
     >
       <Typography
         component="h1"
         variant="h1"
         sx={{
-          color: 'white', textAlign: 'center', my: '30px', textShadow: '2px 2px 2px #21313e', letterSpacing: '15px',
+          color: 'white',
+          textAlign: 'center',
+          my: '30px',
+          textShadow: '2px 2px 2px #21313e',
+          letterSpacing: '15px',
         }}
       >
         Lotus
@@ -48,7 +56,7 @@ const HomePage = () => (
         display: 'flex', alignSelf: 'flex-end', mx: '10vw', mt: '80px', gap: '20px',
       }}
       >
-        <Link to="treatments">
+        <Link to="/treatments">
           <Card sx={{ maxWidth: 300 }}>
             <CardActionArea>
               <CardMedia
