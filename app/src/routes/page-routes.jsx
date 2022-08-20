@@ -5,7 +5,7 @@ import CosmeticsPage from '../pages/cosmetics-page';
 import ErrorPage from '../pages/error-page';
 import HomePage from '../pages/home-page';
 import Login from '../pages/login';
-import Signup from '../pages/signup';
+import Register from '../pages/register';
 import TreatmentsPage from '../pages/treatments-page';
 import WishlistPage from '../pages/wishlist-page';
 import OnlineReservationPage from '../pages/online-reservation-page';
@@ -19,7 +19,7 @@ const PageRoutes = () => (
     <Route path="/wishlist" element={<WishlistPage />} />
     <Route path="/cart" element={<CartPage />} />
     <Route path="/login" element={<Login />} />
-    <Route path="/signup" element={<Signup />} />
+    <Route path="/register" element={<Register />} />
 
     <Route path="*" element={<ErrorPage />} />
   </Routes>

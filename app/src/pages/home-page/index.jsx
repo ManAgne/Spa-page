@@ -10,6 +10,7 @@ import {
   styled,
 } from '@mui/material';
 import SpaTwoToneIcon from '@mui/icons-material/SpaTwoTone';
+import BackgroundImage from '../../components/background-image';
 
 const Link = styled(RouterLink)({
   textDecoration: 'none',
@@ -19,13 +20,7 @@ const Link = styled(RouterLink)({
 
 const HomePage = () => (
   <Box sx={{ height: '100vh', display: 'flex' }}>
-    <Box
-      component="img"
-      src="bg-image.jpg"
-      sx={{
-        position: 'absolute', top: '80px', left: 0, width: '100%', height: '100vh', objectFit: 'cover', zIndex: 0,
-      }}
-    />
+    <BackgroundImage />
     <Box sx={{
       display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100vw', zIndex: 1,
     }}

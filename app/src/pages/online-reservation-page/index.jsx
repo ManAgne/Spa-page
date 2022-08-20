@@ -3,10 +3,11 @@ import {
   Box,
   TextField,
   Paper,
-  Typography,
   Button,
   MenuItem,
 } from '@mui/material';
+import BackgroundImage from '../../components/background-image';
+import PageTitle from '../../components/page-title';
 
 const procedures = [
   {
@@ -23,29 +24,14 @@ const OrderPage = () => {
 
   return (
     <Box sx={{ pt: 7, display: 'flex', flexDirection: 'column' }}>
-      <Box
-        component="img"
-        src="bg-image.jpg"
-        sx={{
-          position: 'absolute', top: '80px', left: 0, width: '100%', height: '100vh', objectFit: 'cover', zIndex: 0,
-        }}
-      />
-      <Typography
-        component="h1"
-        variant="h3"
-        align="center"
-        sx={{
-          color: 'white', my: '20px', textShadow: '2px 2px 2px #21313e', zIndex: 1,
-        }}
-      >
-        Online Reservation
-      </Typography>
+      <BackgroundImage />
+      <PageTitle>Online Reservation</PageTitle>
       <Paper
         elevation={3}
         sx={{
           mt: 4,
           p: 3,
-          width: 500,
+          width: 400,
           mx: 'auto',
           bgcolor: 'white',
           zIndex: 1,

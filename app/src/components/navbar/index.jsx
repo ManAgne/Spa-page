@@ -7,7 +7,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import FavoriteRoundedIcon from '@mui/icons-material/FavoriteRounded';
 import SelfImprovementRoundedIcon from '@mui/icons-material/SelfImprovementRounded';
-import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
 import { useNavigate } from 'react-router-dom';
 import * as Nav from './components';
 
@@ -42,17 +41,8 @@ const NavBar = () => {
 
             <IconButton
               size="large"
-              edge="start"
               color="inherit"
               onClick={() => navigate('/login')}
-            >
-              <AssignmentIndIcon />
-            </IconButton>
-
-            <IconButton
-              size="large"
-              color="inherit"
-              onClick={() => navigate('/signup')}
             >
               <SelfImprovementRoundedIcon />
             </IconButton>
