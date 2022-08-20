@@ -13,7 +13,7 @@ import PageTitle from '../components/page-title';
 const Login = () => (
   <Box sx={{ pt: 7, display: 'flex', flexDirection: 'column' }}>
     <BackgroundImage />
-    <PageTitle>Your account</PageTitle>
+    <PageTitle>Existing account</PageTitle>
     <Paper
       elevation={3}
       sx={{
@@ -36,14 +36,14 @@ const Login = () => (
       >
         <TextField
           name="email"
-          email="email"
+          type="email"
           label="Email"
           variant="filled"
           fullWidth
         />
         <TextField
           name="password"
-          email="password"
+          type="password"
           label="Password"
           variant="filled"
           fullWidth
