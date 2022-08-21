@@ -1,15 +1,15 @@
 import * as React from 'react';
 import { Box, Grid } from '@mui/material';
-import { Filter, ProductCard } from './components';
+import { ProductCard, Filter } from './components';
 
 const updateProduct = async ({ id, ...updateProps }) => {
   const response = await fetch(`http://localhost:8000/products/${id}`, {
     method: 'PATCH',
     headers: {
       Accept: 'application/json',
-      'Context-type': 'application/json',
+      'Content-Type': 'application/json',
     },
-    body: JSON.strigify(updateProps),
+    body: JSON.stringify(updateProps),
   });
   const responseData = await response.json();
 
