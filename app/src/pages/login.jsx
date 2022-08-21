@@ -46,13 +46,12 @@ const Login = () => {
   });
 
   return (
-    <Box sx={{ pt: 7, display: 'flex', flexDirection: 'column' }}>
+    <Box sx={{ pt: 3, display: 'flex', flexDirection: 'column' }}>
       <BackgroundImage />
       <PageTitle>Existing account</PageTitle>
       <Paper
         elevation={3}
         sx={{
-          mt: 4,
           p: 3,
           width: 400,
           mx: 'auto',
@@ -77,6 +76,7 @@ const Login = () => {
             type="email"
             variant="filled"
             fullWidth
+            size="small"
             value={values.email}
             onChange={handleChange}
             onBlur={handleBlur}
@@ -89,6 +89,7 @@ const Login = () => {
             type="password"
             variant="filled"
             fullWidth
+            size="small"
             value={values.password}
             onChange={handleChange}
             onBlur={handleBlur}

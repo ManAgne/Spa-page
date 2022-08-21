@@ -60,13 +60,12 @@ const Register = () => {
   });
 
   return (
-    <Box sx={{ pt: 7, display: 'flex', flexDirection: 'column' }}>
+    <Box sx={{ pt: 3, display: 'flex', flexDirection: 'column' }}>
       <BackgroundImage />
       <PageTitle>New account creation</PageTitle>
       <Paper
         elevation={3}
         sx={{
-          mt: 4,
           p: 3,
           width: 400,
           mx: 'auto',
@@ -91,6 +90,7 @@ const Register = () => {
             type="text"
             variant="filled"
             fullWidth
+            size="small"
             value={values.firstName}
             onChange={handleChange}
             onBlur={handleBlur}
@@ -103,6 +103,7 @@ const Register = () => {
             type="text"
             variant="filled"
             fullWidth
+            size="small"
             value={values.lastName}
             onChange={handleChange}
             onBlur={handleBlur}
@@ -115,6 +116,7 @@ const Register = () => {
             type="email"
             variant="filled"
             fullWidth
+            size="small"
             value={values.email}
             onChange={handleChange}
             onBlur={handleBlur}
@@ -127,6 +129,7 @@ const Register = () => {
             type="password"
             variant="filled"
             fullWidth
+            size="small"
             value={values.password}
             onChange={handleChange}
             onBlur={handleBlur}
@@ -139,6 +142,7 @@ const Register = () => {
             type="password"
             variant="filled"
             fullWidth
+            size="small"
             value={values.passwordConfirmation}
             onChange={handleChange}
             onBlur={handleBlur}
