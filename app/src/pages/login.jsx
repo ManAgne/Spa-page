@@ -19,15 +19,15 @@ const initialValues = {
 
 const validationSchema = yup.object({
   email: yup.string()
-    .required('Privaloma')
-    .email('Neteisingas el. pašto formatas'),
+    .required('Required')
+    .email('Invalid format'),
   password: yup.string()
-    .required('Privaloma')
-    .min(8, 'Mažiausiai 8 simboliai')
-    .matches(/[a-z]/, 'Bent viena mažoji raidė')
-    .matches(/[A-Z]/, 'Bent viena didžioji raidė')
-    .matches(/\d/, 'Bent vienas skaičius')
-    .matches(/\W/, 'Bent vienas specialus simbolis'),
+    .required('Required')
+    .min(8, 'Min 8 characters')
+    .matches(/[a-z]/, 'At least 1 lowercase letter')
+    .matches(/[A-Z]/, 'At least 1 uppercase letter')
+    .matches(/\d/, 'At least 1 number')
+    .matches(/\W/, 'At least 1 special character'),
 });
 
 const Login = () => {
