@@ -21,6 +21,7 @@ const ProductCard = ({
   updateProduct,
 }) => {
   const { addToCart } = React.useContext(CartContext);
+  const qty = 1;
 
   return (
     <Card sx={{
@@ -51,7 +52,7 @@ const ProductCard = ({
       </CardContent>
       <CardActions sx={{ display: 'flex', justifyContent: 'space-between' }}>
         <Button size="small">More</Button>
-        <Button size="small" onClick={() => addToCart(id)}>Add to card</Button>
+        <Button size="small" onClick={() => addToCart({ id, qty })}>Add to card</Button>
       </CardActions>
     </Card>
   );

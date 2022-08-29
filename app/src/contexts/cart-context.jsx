@@ -10,10 +10,10 @@ export const CartProvider = ({ children }) => {
     addToCart: (item) => {
       if (cartItems.find((x) => x.id === item.id)) {
         setCartItems(cartItems.map((x) => (x.id === item.id
-          ? { ...x, qty: x.qty + 1 }
+          ? { ...x, qty: x.qty + item.qty }
           : x)));
       } else {
-        setCartItems([...cartItems, { id: item, qty: 1 }]);
+        setCartItems([...cartItems, item]);
       }
     },
   }), [cartItems]);
