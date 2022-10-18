@@ -16,10 +16,9 @@ const Product = ({
     <Box
       sx={{
         display: 'flex',
-        justifyContent: 'space-between',
       }}
     >
-      <Box sx={{ display: 'flex' }}>
+      <Box sx={{ display: 'flex', flexBasis: '60%' }}>
         <Image
           src={img}
           sx={{ width: '5vw' }}
@@ -32,7 +31,7 @@ const Product = ({
           </Typography>
         </Box>
       </Box>
-      <Box sx={{ alignSelf: 'center' }}>
+      <Box sx={{ alignSelf: 'center', flexBasis: '30%' }}>
         <Box sx={{ display: 'flex' }}>
           <Button
             variant="outlined"
@@ -70,7 +69,13 @@ const Product = ({
           <DeleteForeverIcon sx={{ alignSelf: 'center', mx: 1, fontSize: '40px' }} />
         </Box>
       </Box>
-      <Typography sx={{ alignSelf: 'center' }}>
+      <Typography sx={{
+        alignSelf: 'center',
+        display: 'flex',
+        justifyContent: 'right',
+        flexBasis: '10%',
+      }}
+      >
         {`${price * count}`}
         {' '}
         €
