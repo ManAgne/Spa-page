@@ -50,7 +50,7 @@ const OrderPage = () => {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            gap: 3,
+            gap: 2.5,
           }}
         >
           <TextField
@@ -118,9 +118,10 @@ const OrderPage = () => {
             select
             label="Choose your visit time"
             variant="filled"
+            fullWidth
+            size="small"
             onChange={(event) => setProcedure(event.target.value)}
             value={procedure}
-            fullWidth
           >
             {bookTimes.map((time) => <MenuItem key={time} value={time}>{time}</MenuItem>)}
           </TextField>

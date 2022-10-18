@@ -65,7 +65,7 @@ const Login = () => {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            gap: 3,
+            gap: 2.5,
           }}
           onSubmit={handleSubmit}
           disabled={!dirty || !isValid}

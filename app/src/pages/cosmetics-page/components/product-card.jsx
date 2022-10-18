@@ -10,6 +10,7 @@ import {
 } from '@mui/material';
 import FavoriteRoundedIcon from '@mui/icons-material/FavoriteRounded';
 import FavoriteBorderRoundedIcon from '@mui/icons-material/FavoriteBorderRounded';
+import { useNavigate } from 'react-router-dom';
 import CartContext from '../../../contexts/cart-context';
 
 const ProductCard = ({
@@ -20,6 +21,7 @@ const ProductCard = ({
   liked,
   updateProduct,
 }) => {
+  const navigate = useNavigate();
   const { addToCart } = React.useContext(CartContext);
   const qty = 1;
 
@@ -51,7 +53,7 @@ const ProductCard = ({
         </Typography>
       </CardContent>
       <CardActions sx={{ display: 'flex', justifyContent: 'space-between' }}>
-        <Button size="small">More</Button>
+        <Button size="small" onClick={() => navigate(`/product/${id}`)}>More</Button>
         <Button size="small" onClick={() => addToCart({ id, qty })}>Add to card</Button>
       </CardActions>
     </Card>
