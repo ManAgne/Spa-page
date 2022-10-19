@@ -20,7 +20,11 @@ const fetchCartItems = async (cartItems) => {
 };
 
 const ListSection = () => {
-  const { cartItems: cartItemsData } = React.useContext(CartContext);
+  const {
+    cartItems: cartItemsData,
+    addToCart,
+    deleteItem,
+  } = React.useContext(CartContext);
   const [cartItems, setCartItems] = React.useState([]);
 
   React.useEffect(() => {
@@ -38,11 +42,13 @@ const ListSection = () => {
       sx={{
         bgcolor: 'white',
         width: '60%',
+        maxHeight: '400px',
         m: 1,
         p: 5,
         borderRadius: 1,
         display: 'flex',
         flexDirection: 'column',
+        overflow: 'auto',
       }}
     >
       {cartItems.map(({
@@ -57,8 +63,9 @@ const ListSection = () => {
           img={img}
           title={title}
           count={count}
-          setCount={(newCount) => console.log(newCount)}
+          setCount={(newCount) => addToCart({ id, count: newCount })}
           price={price}
+          deleteItem={() => deleteItem(id)}
         />
       ))}
       <Typography variant="h6" sx={{ textAlign: 'right', fontWeight: 'bold' }}>

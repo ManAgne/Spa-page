@@ -11,6 +11,7 @@ const Product = ({
   count,
   setCount,
   price,
+  deleteItem,
 }) => (
   <Box>
     <Box
@@ -49,12 +50,14 @@ const Product = ({
             size="small"
             inputProps={{
               style: {
-                padding: 0, width: 40, minWidth: 0, textAlign: 'center',
+                padding: 0, textAlign: 'center',
               },
               value: count,
               onChange: (e) => setCount(e.target.value),
             }}
-            sx={{ borderRadius: 0 }}
+            sx={{
+              borderRadius: 0, width: 40, minWidth: 0, height: 40,
+            }}
           />
           <Button
             variant="outlined"
@@ -66,7 +69,9 @@ const Product = ({
           >
             +
           </Button>
-          <DeleteForeverIcon sx={{ alignSelf: 'center', mx: 1, fontSize: '40px' }} />
+          <Button sx={{ padding: 0 }}>
+            <DeleteForeverIcon sx={{ alignSelf: 'center', mx: 1, fontSize: '35px' }} onClick={deleteItem} />
+          </Button>
         </Box>
       </Box>
       <Typography sx={{

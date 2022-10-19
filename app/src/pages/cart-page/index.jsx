@@ -1,10 +1,8 @@
 import * as React from 'react';
 import { Box } from '@mui/material';
-// import CartContext from '../../contexts/cart-context';
 import { ListSection, CheckoutSection } from './components';
 import PageTitle from '../../components/page-title';
 
-// const { cartItems } = React.useContext(CartContext);
 const CartPage = () => (
   <Box sx={{
     pt: 3, mx: 5, display: 'flex', flexDirection: 'column',

@@ -16,6 +16,8 @@ export const CartProvider = ({ children }) => {
         setCartItems([...cartItems, item]);
       }
     },
+
+    deleteItem: (id) => setCartItems(cartItems.filter((x) => x.id !== id)),
   }), [cartItems]);
 
   return (
