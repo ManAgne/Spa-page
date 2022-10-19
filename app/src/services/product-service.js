@@ -1,7 +1,32 @@
 const domain = process.env.REACT_APP_SERVER_ADDRESS;
+const collectionName = 'products';
+const relationsParams = '_expand=category&_expand=materialType&_expand=color';
+
+const fetchAll = async (paramsString = null) => {
+  const urlParamsString = paramsString ? `&${paramsString}` : '';
+
+  const response = await fetch(`${domain}/${collectionName}?${relationsParams}${urlParamsString}`);
+  const products = await response.json();
+
+  return products;
+};
+
+const fetchById = async (id) => {
+  const response = await fetch(`${domain}/${collectionName}/${id}?${relationsParams}`);
+  const item = await response.json();
+
+  return item;
+};
+
+const fetchByIdArr = async (idArr) => {
+  const idsParamsString = idArr.map((id) => `id=${id}`).join('&');
+  const items = await fetchAll(idsParamsString);
+
+  return items;
+};
 
 const update = async ({ id, ...updateProps }) => {
-  const response = await fetch(`${domain}/products/${id}`, {
+  const response = await fetch(`${domain}/${collectionName}/${id}`, {
     method: 'PATCH',
     headers: {
       Accept: 'application/json',
@@ -14,15 +39,10 @@ const update = async ({ id, ...updateProps }) => {
   return responseData;
 };
 
-const fetchAll = async () => {
-  const response = await fetch(`${domain}/products?_expand=category&_expand=type`);
-  const products = await response.json();
-
-  return products;
-};
-
 const ProductService = {
   fetchAll,
+  fetchById,
+  fetchByIdArr,
   update,
 };
 
