@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { Link as RouterLink } from 'react-router-dom';
 import {
   Box,
   Button,
@@ -9,15 +8,27 @@ import {
 } from '@mui/material';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
-import BackgroundImage from '../components/background-image';
-import PageTitle from '../components/page-title';
+import { Link as RouterLink } from 'react-router-dom';
+import BackgroundImage from '../../components/background-image';
+import PageTitle from '../../components/page-title';
 
 const initialValues = {
+  firstName: '',
+  lastName: '',
   email: '',
   password: '',
+  passwordConfirmation: '',
 };
 
 const validationSchema = yup.object({
+  firstName: yup.string()
+    .required('Required')
+    .min(3, 'Min 3 letters')
+    .matches(/^[a-ząčęėįšųūž]+$/i, 'Letters only'),
+  lastName: yup.string()
+    .required('Required')
+    .min(3, 'Min 3 letters')
+    .matches(/^[a-ząčęėįšųūž]+$/i, 'Letters only'),
   email: yup.string()
     .required('Required')
     .email('Invalid format'),
@@ -28,9 +39,12 @@ const validationSchema = yup.object({
     .matches(/[A-Z]/, 'At least 1 uppercase letter')
     .matches(/\d/, 'At least 1 number')
     .matches(/\W/, 'At least 1 special character'),
+  passwordConfirmation: yup.string()
+    .required('Required')
+    .oneOf([yup.ref('password')], 'Passwords do not match'),
 });
 
-const Login = () => {
+const Register = () => {
   const onSubmit = async (values) => {
     console.log('Form is confirmed');
     console.log(values);
@@ -48,7 +62,7 @@ const Login = () => {
   return (
     <Box sx={{ pt: 3, display: 'flex', flexDirection: 'column' }}>
       <BackgroundImage />
-      <PageTitle>Existing account</PageTitle>
+      <PageTitle>New account creation</PageTitle>
       <Paper
         elevation={3}
         sx={{
@@ -70,6 +84,32 @@ const Login = () => {
           onSubmit={handleSubmit}
           disabled={!dirty || !isValid}
         >
+          <TextField
+            name="firstName"
+            label="First name"
+            type="text"
+            variant="filled"
+            fullWidth
+            size="small"
+            value={values.firstName}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            error={touched.firstName && Boolean(errors.firstName)}
+            helperText={touched.firstName && errors.firstName}
+          />
+          <TextField
+            name="lastName"
+            label="Last Name"
+            type="text"
+            variant="filled"
+            fullWidth
+            size="small"
+            value={values.lastName}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            error={touched.lastname && Boolean(errors.lastName)}
+            helperText={touched.lastName && errors.lastName}
+          />
           <TextField
             name="email"
             label="Email"
@@ -93,16 +133,28 @@ const Login = () => {
             value={values.password}
             onChange={handleChange}
             onBlur={handleBlur}
-            error={touched.email && Boolean(errors.password)}
+            error={touched.password && Boolean(errors.password)}
             helperText={touched.password && errors.password}
           />
-          <Button type="submit" variant="contained" size="large">Login</Button>
+          <TextField
+            name="passwordConfirmation"
+            label="Password confirmation"
+            type="password"
+            variant="filled"
+            fullWidth
+            size="small"
+            value={values.passwordConfirmation}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            error={touched.passwordConfirmation && Boolean(errors.passwordConfirmation)}
+            helperText={touched.passwordConfirmation && errors.passwordConfirmation}
+          />
+          <Button type="submit" variant="contained" size="large">Register</Button>
           <Typography variant="body2">
-            Do not have an account yet? Register
+            Already have an account? Login
             {' '}
-            <RouterLink to="/register">here</RouterLink>
+            <RouterLink to="/login">here</RouterLink>
             .
-
           </Typography>
         </Box>
       </Paper>
@@ -110,4 +162,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;
