@@ -28,14 +28,14 @@
       "productTypeId": "1",
       "price": "36",
       "img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226495-1204768401944547.jpg",
-      "liked": true
+      "liked": false
     },
     {
       "id": "f_serum_4",
       "title": "Repair & Restore Intensive Serum",
       "description": "A potent serum that helps soothe and restore moisture. Wheatgerm helps protect the skin against environmental aggressors. Inca Inchi Oil restores moisture balance while Canola and Wild Indigo protect and soothe, helping boost skin's natural moisture barrier.",
       "categoryId": "1",
-      "productTypeId": "1",
+      "productTypeId": "2",
       "price": "37",
       "img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226536-1294768405896744.jpg",
       "liked": false
@@ -45,7 +45,7 @@
       "title": "Tri-Active™ Lift & Firm Intensive Serum",
       "description": "ESPA's Tri-Active™ Lift and Firm Intensive Serum tightens and brightens the skin, super-charged with exclusive Wild Olive. This age-defying concentrate helps visibly restore skin's firmness, elasticity, and bounce - bringing you youthful skin with a radiant lit-from-within glow. Our super serum leaves skin feeling plump and supple.",
       "categoryId": "1",
-      "productTypeId": "1",
+      "productTypeId": "2",
       "price": "45",
       "img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226501-5134858828395924.jpg",
       "liked": false
@@ -55,7 +55,7 @@
       "title": "Optimal Skin Pro-Serum",
       "description": "This nutrient-rich, glow-giving serum hydrates and nourishes the skin with supercharged natural actives. Used daily, this intensely revitalising serum helps to nurture and protect skin's natural moisture barrier so that even sensitive skin feels nurtured and emits a healthy-looking radiance. ",
       "categoryId": "1",
-      "productTypeId": "1",
+      "productTypeId": "2",
       "price": "37",
       "img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12595874-1204840384746024.jpg",
       "liked": false
