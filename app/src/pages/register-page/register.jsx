@@ -66,8 +66,8 @@ const Register = () => {
       <Paper
         elevation={3}
         sx={{
-          p: 3,
           width: 400,
+          p: 3,
           mx: 'auto',
           bgcolor: 'white',
           zIndex: 1,
@@ -107,7 +107,7 @@ const Register = () => {
             value={values.lastName}
             onChange={handleChange}
             onBlur={handleBlur}
-            error={touched.lastname && Boolean(errors.lastName)}
+            error={touched.lastName && Boolean(errors.lastName)}
             helperText={touched.lastName && errors.lastName}
           />
           <TextField
