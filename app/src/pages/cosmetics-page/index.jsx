@@ -1,22 +1,30 @@
 import * as React from 'react';
 import { Box, Grid } from '@mui/material';
+import { useSearchParams } from 'react-router-dom';
 import ProductService from '../../services/product-service';
+import wait from '../../helpers/wait';
 import { ProductCard, Filter } from './components';
 
 const CosmeticsPage = () => {
   const [products, setProducts] = React.useState([]);
+  const [searchParams] = useSearchParams();
 
-  const handleFetchProducts = async () => {
-    const fetchedProducts = await ProductService.fetchAll();
+  const handleFetchProducts = React.useCallback(async () => {
+    const [fetchedProducts] = await Promise.all([
+      ProductService.fetchAll(searchParams.toString()),
+      wait(1000),
+    ]);
     setProducts(fetchedProducts);
-  };
+  }, [searchParams]);
 
   const handleUpdateProduct = async (props) => {
     await ProductService.update(props);
     await handleFetchProducts();
   };
 
-  React.useEffect(() => { handleFetchProducts(); }, []);
+  React.useEffect(() => {
+    handleFetchProducts();
+  }, [handleFetchProducts]);
 
   return (
     <Box sx={{ display: 'flex', py: 3 }}>

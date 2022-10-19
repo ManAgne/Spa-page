@@ -8,6 +8,14 @@ module.exports = {
         "airbnb",
         "airbnb/hooks"
     ],
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "paths": ["src"],
+                "extensions": [".js", ".jsx", ".ts", ".tsx"]
+            }
+        }
+    },
     "parserOptions": {
         "ecmaFeatures": {
             "jsx": true
