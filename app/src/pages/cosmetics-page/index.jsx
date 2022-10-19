@@ -1,38 +1,18 @@
 import * as React from 'react';
 import { Box, Grid } from '@mui/material';
+import ProductService from '../../services/product-service';
 import { ProductCard, Filter } from './components';
-
-const updateProduct = async ({ id, ...updateProps }) => {
-  const response = await fetch(`http://localhost:8000/products/${id}`, {
-    method: 'PATCH',
-    headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(updateProps),
-  });
-  const responseData = await response.json();
-
-  return responseData;
-};
-
-const fetchAllProducts = async () => {
-  const response = await fetch('http://localhost:8000/products');
-  const products = await response.json();
-
-  return products;
-};
 
 const CosmeticsPage = () => {
   const [products, setProducts] = React.useState([]);
 
   const handleFetchProducts = async () => {
-    const fetchedProducts = await fetchAllProducts();
+    const fetchedProducts = await ProductService.fetchAll();
     setProducts(fetchedProducts);
   };
 
   const handleUpdateProduct = async (props) => {
-    await updateProduct(props);
+    await ProductService.update(props);
     await handleFetchProducts();
   };
 
