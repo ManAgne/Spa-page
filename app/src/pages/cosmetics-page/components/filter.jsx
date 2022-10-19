@@ -15,12 +15,12 @@ const categories = [
   { id: '2', label: 'Body care' },
 ];
 
-const skinTypes = [
-  { id: '1', label: 'Normal' },
-  { id: '2', label: 'Dry' },
-  { id: '3', label: 'Oily' },
-  { id: '4', label: 'Combination' },
-];
+// const skinTypes = [
+//   { id: '1', label: 'Normal' },
+//   { id: '2', label: 'Dry' },
+//   { id: '3', label: 'Oily' },
+//   { id: '4', label: 'Combination' },
+// ];
 
 const productTypes = [
   { id: '1', label: 'Moisturiser' },
@@ -33,7 +33,7 @@ const productTypes = [
 const Filter = () => {
   const [priceRange, setPriceRange] = React.useState([1, 50]);
   const [category, setCategory] = React.useState(null);
-  const [SkinType, setSkinType] = React.useState([]);
+  // const [SkinType, setSkinType] = React.useState([]);
   const [selectedProductTypes, setSelectedProductTypes] = React.useState([]);
 
   return (
@@ -79,7 +79,7 @@ const Filter = () => {
       />
       <Divider sx={{ my: 2 }} />
 
-      <Autocomplete
+      {/* <Autocomplete
         disablePortal
         options={skinTypes}
         sx={{ width: '100%' }}
@@ -102,7 +102,7 @@ const Filter = () => {
           />
         )}
       />
-      <Divider sx={{ my: 2 }} />
+      <Divider sx={{ my: 2 }} /> */}
 
       <CheckboxGroup
         label="Product type"
