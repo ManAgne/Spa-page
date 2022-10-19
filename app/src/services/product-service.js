@@ -13,6 +13,9 @@ const fetchAll = async (paramsString = null) => {
 
 const fetchById = async (id) => {
   const response = await fetch(`${domain}/${collectionName}/${id}?${relationsParams}`);
+  if (response.status === 404) {
+    throw new Error(`Product with id '${id}' was not found.`);
+  }
   const item = await response.json();
 
   return item;
