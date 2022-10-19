@@ -1,110 +1,52 @@
 import * as React from 'react';
 import {
-  Autocomplete,
   Box,
   Divider,
-  FormControl,
-  Slider,
-  Typography,
-  TextField,
 } from '@mui/material';
-import CheckboxGroup from '../../../components/checkbox-group';
-
-const categories = [
-  { id: '1', label: 'Face care' },
-  { id: '2', label: 'Body care' },
-];
-
-// const skinTypes = [
-//   { id: '1', label: 'Normal' },
-//   { id: '2', label: 'Dry' },
-//   { id: '3', label: 'Oily' },
-//   { id: '4', label: 'Combination' },
-// ];
-
-const productTypes = [
-  { id: '1', label: 'Moisturiser' },
-  { id: '2', label: 'Serum' },
-  { id: '3', label: 'Mask' },
-  { id: '4', label: 'Exfoliator' },
-  { id: '5', label: 'Oil' },
-];
+import { AutoSelectField, CheckboxField, RangeField } from '../../../components';
+import CategoryService from '../../../services/category-service';
+import ProductTypeService from '../../../services/product-type-service';
 
 const Filter = () => {
+  const [categories, setCategories] = React.useState([]);
+  const [productTypes, setProductTypes] = React.useState([]);
+
   const [priceRange, setPriceRange] = React.useState([1, 50]);
   const [category, setCategory] = React.useState(null);
   // const [SkinType, setSkinType] = React.useState([]);
   const [selectedProductTypes, setSelectedProductTypes] = React.useState([]);
 
+  React.useEffect(() => {
+    (async () => {
+      const [fetchedCategories, fetchedProductTypes] = await Promise.all([
+        CategoryService.fetchAll(),
+        ProductTypeService.fetchAll(),
+      ]);
+      setCategories(fetchedCategories);
+      setProductTypes(fetchedProductTypes);
+    })();
+  }, []);
+
   return (
     <Box sx={{ width: 300, p: 1 }}>
       <Divider />
-      <FormControl sx={{ width: '100%' }}>
-        <Typography variant="h6" sx={{}}>Price range</Typography>
-        <Box sx={{ mx: 2 }}>
-          <Slider
-            value={priceRange}
-            min={1}
-            max={50}
-            onChange={(_, newPriceRange) => setPriceRange(newPriceRange)}
-            valueLabelDisplay="on"
-            sx={{ mt: 4 }}
-          />
-        </Box>
-      </FormControl>
+      <RangeField
+        label="Price"
+        value={priceRange}
+        onChange={(_, newPriceRange) => setPriceRange(newPriceRange)}
+        min={0}
+        max={25}
+      />
       <Divider sx={{ my: 2 }} />
 
-      <Autocomplete
-        disablePortal
+      <AutoSelectField
         options={categories}
-        sx={{ width: '100%' }}
         value={category}
         onChange={(_, newCategory) => setCategory(newCategory)}
-        renderInput={({
-          InputLabelProps,
-          InputProps,
-          inputProps,
-          fullWidth,
-          id,
-        }) => (
-          <TextField
-            label="Category"
-            InputLabelProps={InputLabelProps}
-            InputProps={InputProps}
-            fullWidth={fullWidth}
-            id={id}
-            inputProps={inputProps}
-          />
-        )}
       />
       <Divider sx={{ my: 2 }} />
 
-      {/* <Autocomplete
-        disablePortal
-        options={skinTypes}
-        sx={{ width: '100%' }}
-        value={SkinType}
-        onChange={(_, newSkinType) => setSkinType(newSkinType)}
-        renderInput={({
-          InputLabelProps,
-          InputProps,
-          inputProps,
-          fullWidth,
-          id,
-        }) => (
-          <TextField
-            label="Skin type"
-            InputLabelProps={InputLabelProps}
-            InputProps={InputProps}
-            fullWidth={fullWidth}
-            id={id}
-            inputProps={inputProps}
-          />
-        )}
-      />
-      <Divider sx={{ my: 2 }} /> */}
-
-      <CheckboxGroup
+      <CheckboxField
         label="Product type"
         options={productTypes}
         value={selectedProductTypes}
