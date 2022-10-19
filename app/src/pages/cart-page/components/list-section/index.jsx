@@ -44,30 +44,31 @@ const ListSection = () => {
         width: '60%',
         maxHeight: '400px',
         m: 1,
-        p: 5,
+        p: 3,
         borderRadius: 1,
         display: 'flex',
         flexDirection: 'column',
-        overflow: 'auto',
       }}
     >
-      {cartItems.map(({
-        id,
-        img,
-        title,
-        count,
-        price,
-      }) => (
-        <Product
-          key={id}
-          img={img}
-          title={title}
-          count={count}
-          setCount={(newCount) => addToCart({ id, count: newCount })}
-          price={price}
-          deleteItem={() => deleteItem(id)}
-        />
-      ))}
+      <Box sx={{ overflow: 'auto' }}>
+        {cartItems.map(({
+          id,
+          img,
+          title,
+          count,
+          price,
+        }) => (
+          <Product
+            key={id}
+            img={img}
+            title={title}
+            count={count}
+            setCount={(newCount) => addToCart({ id, count: newCount })}
+            price={price}
+            deleteItem={() => deleteItem(id)}
+          />
+        ))}
+      </Box>
       <Typography variant="h6" sx={{ textAlign: 'right', fontWeight: 'bold' }}>
         Subtotal:
         {' '}

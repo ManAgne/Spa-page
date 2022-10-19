@@ -19,7 +19,7 @@ const Product = ({
         display: 'flex',
       }}
     >
-      <Box sx={{ display: 'flex', flexBasis: '60%' }}>
+      <Box sx={{ display: 'flex', flexBasis: '60%', mx: 1 }}>
         <Image
           src={img}
           sx={{ width: '5vw' }}
@@ -79,6 +79,7 @@ const Product = ({
         display: 'flex',
         justifyContent: 'right',
         flexBasis: '10%',
+        mx: 1,
       }}
       >
         {`${price * count}`}

@@ -6,7 +6,7 @@ import Image from '../../../components/image';
 
 const CheckoutSection = () => (
   <Box sx={{
-    display: 'flex', flexDirection: 'column', bgcolor: 'white', width: '30%', height: 'min-content', m: 1, p: 5, borderRadius: 1,
+    display: 'flex', flexDirection: 'column', bgcolor: 'white', width: '30%', height: 'min-content', m: 1, p: 3, borderRadius: 1,
   }}
   >
     <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
