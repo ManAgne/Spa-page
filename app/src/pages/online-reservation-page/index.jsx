@@ -6,9 +6,16 @@ import {
   Button,
   MenuItem,
 } from '@mui/material';
+import { useFormik } from 'formik';
+import * as yup from 'yup';
 import { DesktopDatePicker } from '@mui/x-date-pickers';
+import moment from 'moment';
 import BackgroundImage from '../../components/background-image';
 import PageTitle from '../../components/page-title';
+
+const lettersOnly = /^[a-ząčęėįšųūž ]+$/i;
+const phoneRegExp = /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/;
+const dateNow = moment(new Date());
 
 const procedures = [
   {
@@ -23,12 +30,48 @@ const procedures = [
 
 const bookTimes = ['09:00', '09:30', '10:00', '10:30', '11:00', '11:30', '12:00', '12:30', '13:00', '13:30', '14:00', '14:30', '15:00', '15:30', '16:00', '16:30', '17:00', '17:30', '18:00', '18:30', '19:00', '19:30'];
 
-const OrderPage = () => {
-  const [name, setName] = React.useState('');
-  const [email, setEmail] = React.useState('');
-  const [phone, setPhone] = React.useState('');
-  const [date, setDate] = React.useState('');
-  const [procedure, setProcedure] = React.useState('');
+const initialValues = {
+  name: '',
+  email: '',
+  phoneNumber: '',
+  date: '',
+  procedure: '',
+};
+
+const validationSchema = yup.object({
+  procedure: yup.string()
+    .required('Required'),
+  name: yup.string()
+    .required('Required')
+    .min(3, 'Min 3 letters')
+    .matches(lettersOnly, 'Letters only'),
+  email: yup.string()
+    .required('Required')
+    .email('Invalid format'),
+  phoneNumber: yup.string()
+    .required('Required')
+    .matches(phoneRegExp, 'Phone number is not valid'),
+  date: yup.date('Format should be YYYY/MM/DD')
+    .required('Required')
+    .min(dateNow, 'aafafaf'),
+  time: yup.string()
+    .required('Required'),
+});
+
+const OnlineReservationPage = () => {
+  const onSubmit = async (values) => {
+    console.log('Form is confirmed');
+    console.log(values);
+  };
+
+  const {
+    dirty, values, errors, touched, isValid,
+    handleChange, handleBlur, handleSubmit, setFieldValue, setFieldTouched,
+  } = useFormik({
+    initialValues,
+    validationSchema,
+    onSubmit,
+  });
 
   return (
     <Box sx={{ pt: 3, display: 'flex', flexDirection: 'column' }}>
@@ -52,6 +95,8 @@ const OrderPage = () => {
             alignItems: 'center',
             gap: 2.5,
           }}
+          onSubmit={handleSubmit}
+          disabled={!dirty || !isValid}
         >
           <TextField
             name="procedure"
@@ -60,8 +105,11 @@ const OrderPage = () => {
             variant="filled"
             fullWidth
             size="small"
-            onChange={(event) => setProcedure(event.target.value)}
-            value={procedure}
+            value={values.procedure}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            error={touched.procedure && Boolean(errors.procedure)}
+            helperText={touched.procedure && errors.procedure}
           >
             {procedures.map(
               ({ value, label }) => <MenuItem key={value} value={value}>{label}</MenuItem>,
@@ -74,8 +122,11 @@ const OrderPage = () => {
             variant="filled"
             fullWidth
             size="small"
-            onChange={(event) => setName(event.target.value)}
-            value={name}
+            value={values.name}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            error={touched.name && Boolean(errors.name)}
+            helperText={touched.name && errors.name}
           />
           <TextField
             name="email"
@@ -84,21 +135,36 @@ const OrderPage = () => {
             variant="filled"
             fullWidth
             size="small"
-            onChange={(event) => setEmail(event.target.value)}
-            value={email}
+            value={values.email}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            error={touched.email && Boolean(errors.email)}
+            helperText={touched.email && errors.email}
           />
           <TextField
-            name="phone number"
+            name="phoneNumber"
             label="Phone number"
             type="text"
             variant="filled"
             fullWidth
             size="small"
-            onChange={(event) => setPhone(event.target.value)}
-            value={phone}
+            value={values.phoneNumber}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            error={touched.phoneNumber && Boolean(errors.phoneNumber)}
+            helperText={touched.phoneNumber && errors.phoneNumber}
           />
           <DesktopDatePicker
             inputFormat="yyyy/MM/DD"
+            disableMaskedInput
+            disablePast
+            value={values.date}
+            onChange={(momentInstance) => {
+              if (momentInstance.isValid) {
+                setFieldTouched('date', true, false);
+                setFieldValue('date', momentInstance, true);
+              }
+            }}
             renderInput={(params) => (
               <TextField
                 // eslint-disable-next-line react/jsx-props-no-spreading
@@ -108,22 +174,28 @@ const OrderPage = () => {
                 variant="filled"
                 fullWidth
                 size="small"
-                onChange={(event) => setDate(event.target.value)}
-                value={date}
+                onBlur={handleBlur}
+                error={touched.date && Boolean(errors.date)}
+                helperText={touched.date && errors.date}
               />
             )}
           />
           <TextField
-            name="bookTime"
+            name="time"
             select
             label="Choose your visit time"
             variant="filled"
             fullWidth
             size="small"
-            onChange={(event) => setProcedure(event.target.value)}
-            value={procedure}
+            value={values.time}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            error={touched.time && Boolean(errors.time)}
+            helperText={touched.time && errors.time}
           >
-            {bookTimes.map((time) => <MenuItem key={time} value={time}>{time}</MenuItem>)}
+            {bookTimes.map(
+              (bookTime) => <MenuItem key={bookTime} value={bookTime}>{bookTime}</MenuItem>,
+            )}
           </TextField>
           <Button type="submit" variant="contained" size="large">Confirm reservation</Button>
         </Box>
@@ -133,4 +205,4 @@ const OrderPage = () => {
   );
 };
 
-export default OrderPage;
+export default OnlineReservationPage;
