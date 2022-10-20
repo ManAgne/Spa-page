@@ -48,6 +48,7 @@ const ListSection = () => {
         borderRadius: 1,
         display: 'flex',
         flexDirection: 'column',
+        justifyContent: 'space-between',
       }}
     >
       <Box sx={{ overflow: 'auto' }}>
