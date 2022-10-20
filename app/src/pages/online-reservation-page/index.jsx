@@ -53,7 +53,7 @@ const validationSchema = yup.object({
     .matches(phoneRegExp, 'Phone number is not valid'),
   date: yup.date('Format should be YYYY/MM/DD')
     .required('Required')
-    .min(dateNow, 'aafafaf'),
+    .min(dateNow, 'Cannot be past date'),
   time: yup.string()
     .required('Required'),
 });
