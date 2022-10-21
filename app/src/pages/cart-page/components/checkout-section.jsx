@@ -1,7 +1,8 @@
 import * as React from 'react';
 import {
-  Box, Button, Divider, Typography,
+  Box, Button, Divider, Typography, Tooltip,
 } from '@mui/material';
+import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import Image from '../../../components/image';
 import CartContext from '../../../contexts/cart-context';
 
@@ -37,6 +38,7 @@ const CheckoutSection = () => {
 
   const subtotal = cartItems.reduce((prevSum, { count, price }) => prevSum + count * price, 0);
   const deliveryCharge = 5;
+  const freeDelivery = 0;
 
   return (
     <Box sx={{
@@ -45,11 +47,20 @@ const CheckoutSection = () => {
     >
       <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
         <Typography variant="h5" sx={{ fontWeight: 'bold' }}>Total</Typography>
-        <Typography variant="h5" sx={{ fontWeight: 'bold' }}>
-          {`${subtotal + deliveryCharge}`}
-          {' '}
-          €
-        </Typography>
+        {subtotal < 50 && subtotal !== 0 ? (
+          <Typography variant="h5" sx={{ fontWeight: 'bold' }}>
+            {`${subtotal + deliveryCharge}`}
+            {' '}
+            €
+          </Typography>
+        )
+          : (
+            <Typography variant="h5" sx={{ fontWeight: 'bold' }}>
+              {`${subtotal + freeDelivery}`}
+              {' '}
+              €
+            </Typography>
+          )}
       </Box>
       <Divider sx={{ m: 1 }} />
       <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
@@ -61,12 +72,26 @@ const CheckoutSection = () => {
         </Typography>
       </Box>
       <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
-        <Typography variant="h6">Delivery</Typography>
         <Typography variant="h6">
-          {deliveryCharge}
-          {' '}
-          €
+          Delivery
+          <Tooltip title="Free delivery on orders 50€ and above">
+            <InfoOutlinedIcon sx={{ fontSize: '15px' }} />
+          </Tooltip>
         </Typography>
+        {subtotal < 50 && subtotal !== 0 ? (
+          <Typography variant="h6">
+            {deliveryCharge}
+            {' '}
+            €
+          </Typography>
+        )
+          : (
+            <Typography variant="h6">
+              {freeDelivery}
+              {' '}
+              €
+            </Typography>
+          )}
       </Box>
       <Divider sx={{ m: 1 }} />
       <Button variant="contained" sx={{ my: 2 }}>CHECKOUT</Button>
