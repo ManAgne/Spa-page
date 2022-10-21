@@ -93,7 +93,7 @@ const Login = () => {
             value={values.password}
             onChange={handleChange}
             onBlur={handleBlur}
-            error={touched.email && Boolean(errors.password)}
+            error={touched.password && Boolean(errors.password)}
             helperText={touched.password && errors.password}
           />
           <Button type="submit" variant="contained" size="large">Login</Button>
