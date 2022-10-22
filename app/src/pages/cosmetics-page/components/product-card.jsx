@@ -18,9 +18,12 @@ const ProductCard = ({
   title,
   price,
   img,
+  images,
   liked,
   updateProduct,
 }) => {
+  const [displayedImg, setDisplayedImg] = React.useState(img);
+
   const navigate = useNavigate();
   const { addToCart } = React.useContext(CartContext);
   const count = 1;
@@ -39,8 +42,11 @@ const ProductCard = ({
       <CardMedia
         component="img"
         width="100%"
-        image={img}
+        image={displayedImg}
         alt={title}
+        onMouseEnter={() => setDisplayedImg(images[1])}
+        onMouseOut={() => setDisplayedImg(img)}
+        onClick={() => navigate(`/product/${id}`)}
       />
       <CardContent>
         <Typography gutterBottom variant="h6" component="div" sx={{ textAlign: 'center', minHeight: '64px' }}>
