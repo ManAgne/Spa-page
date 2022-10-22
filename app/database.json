@@ -7,7 +7,12 @@
       "categoryId": "1",
       "productTypeId": "1",
       "price": 36,
-      "images": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226493-2104858624896150.jpg",
+      "img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226493-2104858624896150.jpg",
+      "images": [
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226493-2104858624896150.jpg",
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226493-2104858624896150.jpg",
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226493-2104858624896150.jpg"
+      ],
       "liked": false
     },
     {
@@ -18,6 +23,11 @@
       "productTypeId": "1",
       "price": 42,
       "img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226503-1944858828507032.jpg",
+      "images": [
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226503-1944858828507032.jpg",
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226503-1944858828507032.jpg",
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226503-1944858828507032.jpg"
+      ],
       "liked": false
     },
     {
@@ -28,6 +38,11 @@
       "productTypeId": "1",
       "price": 36,
       "img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226495-1204768401944547.jpg",
+      "images": [
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226495-1204768401944547.jpg",
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226495-1204768401944547.jpg",
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226495-1204768401944547.jpg"
+      ],
       "liked": false
     },
     {
@@ -38,6 +53,11 @@
       "productTypeId": "2",
       "price": 37,
       "img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226536-1294768405896744.jpg",
+      "images": [
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226536-1294768405896744.jpg",
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226536-1294768405896744.jpg",
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226536-1294768405896744.jpg"
+      ],
       "liked": false
     },
     {
@@ -48,6 +68,11 @@
       "productTypeId": "2",
       "price": 45,
       "img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226501-5134858828395924.jpg",
+      "images": [
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226501-5134858828395924.jpg",
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226501-5134858828395924.jpg",
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226501-5134858828395924.jpg"
+      ],
       "liked": false
     },
     {
@@ -58,6 +83,11 @@
       "productTypeId": "2",
       "price": 37,
       "img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12595874-1204840384746024.jpg",
+      "images": [
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12595874-1204840384746024.jpg",
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12595874-1204840384746024.jpg",
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12595874-1204840384746024.jpg"
+      ],
       "liked": false
     },
     {
@@ -68,6 +98,11 @@
       "productTypeId": "3",
       "price": 30,
       "img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12595883-9264840384960656.jpg",
+      "images": [
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12595883-9264840384960656.jpg",
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12595883-9264840384960656.jpg",
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12595883-9264840384960656.jpg"
+      ],
       "liked": false
     },
     {
@@ -78,6 +113,11 @@
       "productTypeId": "3",
       "price": 32,
       "img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226487-7224768400982303.jpg",
+      "images": [
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226487-7224768400982303.jpg",
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226487-7224768400982303.jpg",
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226487-7224768400982303.jpg"
+      ],
       "liked": false
     },
     {
@@ -88,6 +128,11 @@
       "productTypeId": "3",
       "price": 34,
       "img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12595885-2124907549317377.jpg",
+      "images": [
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12595885-2124907549317377.jpg",
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12595885-2124907549317377.jpg",
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12595885-2124907549317377.jpg"
+      ],
       "liked": false
     },
     {
@@ -98,6 +143,11 @@
       "productTypeId": "4",
       "price": 28,
       "img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226505-1944858625105160.jpg",
+      "images": [
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226505-1944858625105160.jpg",
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226505-1944858625105160.jpg",
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226505-1944858625105160.jpg"
+      ],
       "liked": false
     },
     {
@@ -108,6 +158,11 @@
       "productTypeId": "4",
       "price": 28,
       "img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226535-9534788608232561.jpg",
+      "images": [
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226535-9534788608232561.jpg",
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226535-9534788608232561.jpg",
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226535-9534788608232561.jpg"
+      ],
       "liked": true
     },
     {
@@ -118,6 +173,11 @@
       "productTypeId": "4",
       "price": 30,
       "img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226497-8984858624930659.jpg",
+      "images": [
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226497-8984858624930659.jpg",
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226497-8984858624930659.jpg",
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226497-8984858624930659.jpg"
+      ],
       "liked": false
     },
     {
@@ -128,6 +188,11 @@
       "productTypeId": "1",
       "price": 30,
       "img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226547-1304911467559639.jpg",
+      "images": [
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226547-1304911467559639.jpg",
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226547-1304911467559639.jpg",
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226547-1304911467559639.jpg"
+      ],
       "liked": false
     },
     {
@@ -138,6 +203,11 @@
       "productTypeId": "1",
       "price": 30,
       "img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226516-1404768403621235.jpg",
+      "images": [
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226516-1404768403621235.jpg",
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226516-1404768403621235.jpg",
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226516-1404768403621235.jpg"
+      ],
       "liked": false
     },
     {
@@ -148,6 +218,11 @@
       "productTypeId": "1",
       "price": 30,
       "img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226508-9464768403240793.jpg",
+      "images": [
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226508-9464768403240793.jpg",
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226508-9464768403240793.jpg",
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12226508-9464768403240793.jpg"
+      ],
       "liked": false
     },
     {
@@ -158,6 +233,11 @@
       "productTypeId": "5",
       "price": 28,
       "img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12062213-3934947263603745.jpg",
+      "images": [
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12062213-3934947263603745.jpg",
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12062213-3934947263603745.jpg",
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12062213-3934947263603745.jpg"
+      ],
       "liked": false
     },
     {
@@ -168,6 +248,11 @@
       "productTypeId": "5",
       "price": 26,
       "img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12589971-1024942865333355.jpg",
+      "images": [
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12589971-1024942865333355.jpg",
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12589971-1024942865333355.jpg",
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12589971-1024942865333355.jpg"
+      ],
       "liked": false
     },
     {
@@ -178,6 +263,11 @@
       "productTypeId": "5",
       "price": 26,
       "img": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12589970-7994942865240184.jpg",
+      "images": [
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12589970-7994942865240184.jpg",
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12589970-7994942865240184.jpg",
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12589970-7994942865240184.jpg"
+      ],
       "liked": false
     }
   ],

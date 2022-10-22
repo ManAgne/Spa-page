@@ -34,5 +34,5 @@ module.exports = {
             "namedComponents": "arrow-function"
         }],
         "react/jsx-no-duplicate-props": [1, { "ignoreCase": false }]
-    }
+    },
 }
