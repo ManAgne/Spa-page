@@ -5,7 +5,7 @@ import {
   Alert,
 } from '@mui/material';
 import ProductService from '../../services/product-service';
-import Content from './content';
+import ProductContent from './product-content';
 
 const ProductPage = () => {
   const { productId } = useParams();
@@ -26,7 +26,7 @@ const ProductPage = () => {
   return (
     <Container>
       {errorMsg && (<Alert severity="error">{errorMsg}</Alert>)}
-      {product && <Content product={product} />}
+      {product && <ProductContent product={product} />}
     </Container>
   );
 };

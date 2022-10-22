@@ -4,7 +4,7 @@ import {
 } from '@mui/material';
 import Image from '../../components/image';
 
-const Content = ({ product }) => {
+const ProductContent = ({ product }) => {
   const [count, setCount] = React.useState([1]);
 
   return (
@@ -71,4 +71,4 @@ const Content = ({ product }) => {
   );
 };
 
-export default Content;
+export default ProductContent;
