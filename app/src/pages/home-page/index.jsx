@@ -19,7 +19,7 @@ const Link = styled(RouterLink)({
 });
 
 const HomePage = () => (
-  <Box sx={{ height: '100vh', display: 'flex' }}>
+  <Box sx={{ display: 'flex' }}>
     <BackgroundImage />
     <Box sx={{
       display: 'flex',
