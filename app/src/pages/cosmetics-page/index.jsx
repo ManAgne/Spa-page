@@ -12,7 +12,7 @@ const CosmeticsPage = () => {
   const handleFetchProducts = React.useCallback(async () => {
     const [fetchedProducts] = await Promise.all([
       ProductService.fetchAll(searchParams.toString()),
-      wait(1000),
+      wait(500),
     ]);
     setProducts(fetchedProducts);
   }, [searchParams]);

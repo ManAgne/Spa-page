@@ -54,7 +54,7 @@ const ProductCard = ({
       </CardContent>
       <CardActions sx={{ display: 'flex', justifyContent: 'space-between' }}>
         <Button size="small" onClick={() => navigate(`/product/${id}`)}>More</Button>
-        <Button size="small" onClick={() => addToCart({ id, count })}>Add to card</Button>
+        <Button size="small" onClick={() => addToCart({ id, count })}>Add to cart</Button>
       </CardActions>
     </Card>
   );
