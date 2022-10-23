@@ -285,60 +285,60 @@
       "label": "oil"
     }
   ],
-  "treatments": [
+  "services": [
     {
       "id": "1",
       "title": "Traditional Thai Massage",
       "description": "Thai massage has a number of ling term benefits – it can make a real difference to one’s health, mental attitude and well being. Massage increases flexibility, relieves pain and muscle tension, improves blood and lymph circulation, facilitates relaxation and invigorates the nervous system. If performed on regular basis it can help to reduce various ailments and their symptoms.",
-      "price": "60/ 90",
-      "duration": "60/ 90 min."
+      "price": "60 €",
+      "duration": "60 min."
     },
     {
       "id": "2",
       "title": "Thai massage with herbal balls",
       "description": "Traditionally the herbal ball is placed on the specific areas after strong, active Thai massage therapy, warming up joints, tightened muscles and other parts of body. Herbal aroma calms, relaxes and reduces the tension, while the heat helps to open pores, refresh the skin, enhance blood circulation and reduce muscle or joint aches.",
       "category": "massage",
-      "price": "65",
-      "duration": "60/ 90 min."
+      "price": "65 €",
+      "duration": "60 min."
     },
     {
       "id": "3",
       "title": "Relaxing honey massage",
       "description": "This is exceptionally soothing and relaxing massage with warm natural honey and oil. Healing qualities of honey are known and appreciated since ancient times. Honey absorbs toxins and helps to remove them from our organism. It also activates blood circulation and warms up the whole body, cleans and nourishes our skin. Honey massage also reduces fatigue, relaxes, calms and leaves the sence of lightness and freshness. Furthermore, it enhances the whole body well-being and resistance to infections.",
       "category": "massage",
-      "price": "57",
-      "duration": "60/ 90 min."
+      "price": "57 €",
+      "duration": "60 min."
     },
     {
       "id": "4",
       "title": "Black chocolate massage",
       "description": "Due to the rich contents of cacao fruits, tempting smell and infatuating taste, chocolate has been known as one of the most pleasant energizers and afrodisiacs for long time now, as well as the undeniable source of beauty and wellness. Used during relaxing and soothing massage, it not only moisturizes, regenerates and softens the skin, but also can cause slimming effect, shape and firm your body lines.",
       "category": "massage",
-      "price": "70",
-      "duration": "60/ 90 min."
+      "price": "70 €",
+      "duration": "60 min."
     },
     {
       "id": "5",
       "title": "Stimulating / toning massage",
       "description": "Stimulating massage helps to recharge after a hard working day, stimulates activity of your organism, reduces fatigue and boosts your daily energy. It suites not only for active sportsmen, also for those, who constantly suffer from physical tension or stress, for those who want to recharge their energy after a big physical charge, intensive trainings, who want to strenghten and relax tired and tensed muscles ant to regain lost power.",
       "category": "massage",
-      "price": "60",
-      "duration": "60/ 90 min."
+      "price": "60 €",
+      "duration": "60 min."
     },
     {
       "id": "6",
       "title": "Deep tissue massage",
       "description": "Strengthening, stimulating and toning, this massage creates a long-term effect, that can be felt in all the body. It releases tensions from muscles, increases their elasticity and body flexibility, takes away fatigue and energizes. For those, who are engaged in sports, it helps to prepare  for trainings better and recover faster after a big physical load, sustain physical shape and tonus.",
       "category": "massage",
-      "price": "60",
-      "duration": "60/ 90 min."
+      "price": "60 €",
+      "duration": "60 min."
     },
     {
       "id": "7",
       "title": "Traditional Thai facial treatment",
       "description": "Traditional Thai facial treatment consists of facial cleansing and natural herbal scrub, Din Saw Pong facial mask and pressure-point facial massage, which not only stimulates blood circulation and reduces wrinkles, but also relaxes and releases tensions from your face.",
       "category": "facial treatment",
-      "price": "55",
+      "price": "55 €",
       "duration": "60 min."
     },
     {
@@ -346,7 +346,7 @@
       "title": "Kobido facial massage",
       "description": "Kobido facial massage with detoxifying green clay scrub is designed for facial skin lacking vitality, glow, contour. Japanese Kobido massage helps to slow down ageing and to improve the skin condition. Fast movements during the treatment activate energy spots, stimulate, tone up and relax facial muscles. Facial skin becomes firmer, the facial contour more distinctive, wrinkles are reduced.",
       "category": "facial treatment",
-      "price": "60",
+      "price": "60 €",
       "duration": "60 min."
     },
     {
@@ -354,7 +354,7 @@
       "title": "Facial treatment 'Buddha gold'",
       "description": "Glowing gold particles create an excellent deffence layer, protecting from harmful external influences, strengthening the skin’s immunity and it’s resistance. In addition to this, gold slows down desintegration of callogen and elastin, firms and smoothens facial skin, protects it from becoming flabby, enhance it’s softness, elasticity, youthfulness and glow. Facial treatment “Buddha Gold” perfectly suits for mature, dry, dull and irritated facial skin.",
       "category": "facial treatment",
-      "price": "65",
+      "price": "65 €",
       "duration": "60 min."
     },
     {
@@ -362,7 +362,7 @@
       "title": "Dream of Thailand",
       "description": "SPA package „Dream of Thailand“ – it is a great opportunity not only to stay in an exclusive environment, but also to enjoy the pleasures of spa together. This SPA package will not only give you good emotions but also will make you feel better physically.",
       "category": "ritual",
-      "price": "95",
+      "price": "95 €",
       "duration": "120 min."
     },
     {
@@ -370,7 +370,7 @@
       "title": "Secrets of Royal Rest",
       "description": "This SPA set will be enjoyed by those who crave a longer and even more relaxing SPA ritual. During the ritual, you will enjoy luxurious cosmetics, soothing aromas and perfectly balanced procedures that will immerse you in a real oasis of peace. This rest will be appreciated by your body, mind, and soul. Discover the secrets of the Royal Rest, a rest that everyone definitely desires and deserves.",
       "category": "ritual",
-      "price": "85",
+      "price": "85 €",
       "duration": "120 min."
     },
     {
@@ -378,7 +378,7 @@
       "title": "Aphrodite’s Magic",
       "description": "Pearls have long been considered one of the most precious elixirs of youth. The luxurious pearl body scrub is enriched with minerals from the underwater world, precious salts and the iridescent pearlescent shine of iridescent pearls. Luxurious jojoba and almond oils, supplemented with natural skin-protecting components, valuable unsaturated fatty acids and moisturizers, stimulate the synthesis of collagen and elastin, making it an excellent anti-aging agent.",
       "category": "ritual",
-      "price": "100",
+      "price": "100 €",
       "duration": "120 min."
     },
     {
@@ -386,7 +386,7 @@
       "title": "Pleasant relaxation",
       "description": "Spa package „Pleasant relaxation“ is a balanced ritual of procedures for those who want to enjoy the spa pleasures for longer and receive full benefit of it.",
       "category": "ritual",
-      "price": "80",
+      "price": "80 €",
       "duration": "100 min."
     }
   ]
