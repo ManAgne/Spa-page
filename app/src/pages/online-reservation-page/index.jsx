@@ -8,10 +8,9 @@ import {
 } from '@mui/material';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
-import { DesktopDatePicker } from '@mui/x-date-pickers';
 import moment from 'moment';
-import BackgroundImage from '../../components/background-image';
-import PageTitle from '../../components/page-title';
+import { DesktopDatePicker } from '@mui/x-date-pickers';
+import { BackgroundImage, PageTitle } from '../../components';
 
 const lettersOnly = /^[a-ząčęėįšųūž ]+$/i;
 const phoneRegExp = /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/;
