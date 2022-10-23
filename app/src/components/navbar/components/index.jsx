@@ -5,7 +5,6 @@ export const Link = styled(NavLink)(({ theme }) => ({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  padding: theme.spacing(0, 4),
   textDecoration: 'none',
   color: theme.palette.common.white,
 

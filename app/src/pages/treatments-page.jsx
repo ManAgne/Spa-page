@@ -16,10 +16,13 @@ const TreatmentsPage = () => (
       zIndex: 1,
     }}
     >
-      <PageTitle>Treatments</PageTitle>
-      <Box sx={{ display: 'flex' }}>
+      <PageTitle>Spa Treatments</PageTitle>
+      <Box sx={{
+        display: 'flex', justifyContent: 'center', width: '100%', mt: 5, gap: 3,
+      }}
+      >
         <Link to="/treatments">
-          <Card sx={{ maxWidth: 300 }}>
+          <Card sx={{ maxWidth: 350, height: '101%' }}>
             <CardActionArea>
               <CardMedia
                 component="img"
@@ -29,62 +32,59 @@ const TreatmentsPage = () => (
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  Treatments
+                  Massages
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore qui numquam
-                  quasi eveniet a velit voluptatibus adipisci fugiat omnis, sit, cupiditate,
-                  neque autem soluta ut veritatis. Deserunt expedita dolor, sapiente, dolore
-                  placeat quidem ab quae, sed reprehenderit alias reiciendis cum magni corrupti
-                  praesentium labore aperiam quo eveniet voluptatibus ea. Magni.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
+                  voluptates consectetur aliquid ipsum cumque dolor, qui doloremque
+                  atque error a quae excepturi animi obcaecati culpa, quis accusamus
+                  veniam adipisci dolorem.
                 </Typography>
               </CardContent>
             </CardActionArea>
           </Card>
         </Link>
         <Link to="/treatments">
-          <Card sx={{ maxWidth: 300 }}>
+          <Card sx={{ maxWidth: 350, height: '101%' }}>
             <CardActionArea>
               <CardMedia
                 component="img"
                 height="170"
-                image="spa-treatment.jpg"
+                image="facial.jpg"
                 alt="treatments"
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  Treatments
+                  Facial Treatments
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi aperiam
-                  culpa ab accusamus cumque ducimus tempora quis facilis minus. Commodi quisquam
-                  quibusdam reprehenderit beatae eos eligendi nulla? Eum tempore rem itaque
-                  voluptas ea modi. Alias, voluptate blanditiis ea doloribus corrupti molestiae
-                  ullam obcaecati praesentium totam dolor fugiat quaerat quas sequi!
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Cum dolor unde, error aliquam ratione iste. Necessitatibus
+                  reiciendis quas, voluptatem saepe soluta cum libero in maxime
+                  expedita, amet ipsa, ex laboriosam.
                 </Typography>
               </CardContent>
             </CardActionArea>
           </Card>
         </Link>
         <Link to="/treatments">
-          <Card sx={{ maxWidth: 300 }}>
+          <Card sx={{ maxWidth: 350, height: '101%' }}>
             <CardActionArea>
               <CardMedia
                 component="img"
                 height="170"
-                image="couple.jpg"
+                image="ritual.jpg"
                 alt="treatments"
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  Treatments
+                  Spa Rituals
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem recusandae
-                  officia impedit iure, rem a itaque animi quo laborum, ab veniam eveniet, vero
-                  quaerat delectus deserunt explicabo tenetur excepturi nulla blanditiis. Maiores,
-                  aspernatur! Sapiente, temporibus rerum! Esse aliquam in, rerum nesciunt veniam
-                  quae laborum, sequi perspiciatis accusamus cumque laudantium fuga?
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum
+                  beatae veritatis perferendis ex debitis iure quod cupiditate!
+                  Voluptate omnis molestiae laborum, aliquid aspernatur magnam,
+                  dolores repudiandae dolor quisquam nobis deserunt!
                 </Typography>
               </CardContent>
             </CardActionArea>

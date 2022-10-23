@@ -53,7 +53,7 @@ const HomePage = () => (
         explicabo error.
       </Typography>
       <Box sx={{
-        display: 'flex', alignSelf: 'flex-end', mx: '10vw', mt: '80px', gap: '20px',
+        display: 'flex', alignSelf: 'flex-end', mx: '10vw', mt: '70px', gap: '20px',
       }}
       >
         <Link to="/treatments">
@@ -61,9 +61,9 @@ const HomePage = () => (
             <CardActionArea>
               <CardMedia
                 component="img"
-                height="170"
                 image="img-treatments.jpg"
                 alt="treatments"
+                sx={{ objectFit: 'contain', mt: -2 }}
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
@@ -82,9 +82,9 @@ const HomePage = () => (
             <CardActionArea>
               <CardMedia
                 component="img"
-                height="170"
                 image="img-cosmetics.jpg"
                 alt="cosmetics"
+                sx={{ objectFit: 'contain', mt: -2 }}
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">

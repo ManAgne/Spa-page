@@ -34,7 +34,15 @@ const NavBar = () => {
           </IconButton>
 
           <Box sx={{ display: 'flex', alignSelf: 'stretch' }}>
-            {pages.map(({ text, to }) => <Nav.Link key={to} to={to}>{text}</Nav.Link>)}
+            {pages.map(({ text, to }) => (
+              <Nav.Link
+                key={to}
+                to={to}
+                sx={{ px: 4 }}
+              >
+                {text}
+              </Nav.Link>
+            ))}
           </Box>
 
           <Box>
