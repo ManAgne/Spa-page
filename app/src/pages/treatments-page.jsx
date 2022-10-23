@@ -21,7 +21,7 @@ const TreatmentsPage = () => (
         display: 'flex', justifyContent: 'center', width: '100%', mt: 5, gap: 3,
       }}
       >
-        <Link to="/treatments">
+        <Link to="/treatments/massages">
           <Card sx={{ maxWidth: 350, height: '101%' }}>
             <CardActionArea>
               <CardMedia
@@ -44,7 +44,7 @@ const TreatmentsPage = () => (
             </CardActionArea>
           </Card>
         </Link>
-        <Link to="/treatments">
+        <Link to="/treatments/facial">
           <Card sx={{ maxWidth: 350, height: '101%' }}>
             <CardActionArea>
               <CardMedia
@@ -67,7 +67,7 @@ const TreatmentsPage = () => (
             </CardActionArea>
           </Card>
         </Link>
-        <Link to="/treatments">
+        <Link to="/treatments/rituals">
           <Card sx={{ maxWidth: 350, height: '101%' }}>
             <CardActionArea>
               <CardMedia
