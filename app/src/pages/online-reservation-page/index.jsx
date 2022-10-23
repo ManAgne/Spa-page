@@ -14,7 +14,7 @@ import { BackgroundImage, PageTitle } from '../../components';
 
 const lettersOnly = /^[a-ząčęėįšųūž ]+$/i;
 const phoneRegExp = /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/;
-const dateNow = moment(new Date());
+const dateNow = moment().subtract(1, 'days');
 
 const procedures = [
   {
