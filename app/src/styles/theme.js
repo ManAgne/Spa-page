@@ -17,7 +17,7 @@ const baseTheme = createTheme({
   },
 
   zIndex: {
-    appBar: 1300,
+    appBar: 10,
   },
 });
 
@@ -27,7 +27,8 @@ const mixinTheme = createTheme(baseTheme, {
       display: 'flex',
       justifyContent: 'space-between',
       height: '64px',
-      padding: baseTheme.spacing(0, 2),
+      padding: baseTheme.spacing(0, 1),
+      zIndex: 11,
     },
   },
 });
@@ -38,6 +39,10 @@ const lightTheme = createTheme(mixinTheme, {
   palette: {
     primary: {
       ...createColor('#21313e'),
+      contrastText: baseTheme.palette.common.white,
+    },
+    secondary: {
+      ...createColor('#bb994d'),
       contrastText: baseTheme.palette.common.white,
     },
   },
