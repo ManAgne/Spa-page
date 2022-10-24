@@ -35,7 +35,6 @@ const CosmeticsPage = () => {
           title,
           price,
           images,
-          img,
           liked,
         }) => (
           <Grid key={id} item xs={6} md={4} lg={3} sx={{ gridAutoRows: 'max-content' }}>
@@ -44,7 +43,6 @@ const CosmeticsPage = () => {
               title={title}
               price={price}
               images={images}
-              img={img}
               liked={liked}
               updateProduct={handleUpdateProduct}
             />

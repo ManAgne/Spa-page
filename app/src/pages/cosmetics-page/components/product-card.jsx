@@ -17,12 +17,13 @@ const ProductCard = ({
   id,
   title,
   price,
-  img,
   images,
   liked,
   updateProduct,
 }) => {
-  const [displayedImg, setDisplayedImg] = React.useState(img);
+  const firstImage = images[0];
+  const secondImage = images[1];
+  const [displayedImg, setDisplayedImg] = React.useState(firstImage);
 
   const navigate = useNavigate();
   const { addToCart } = useCart();
@@ -44,8 +45,8 @@ const ProductCard = ({
         width="100%"
         image={displayedImg}
         alt={title}
-        onMouseEnter={() => setDisplayedImg(images[1])}
-        onMouseOut={() => setDisplayedImg(img)}
+        onMouseEnter={() => setDisplayedImg(secondImage)}
+        onMouseOut={() => setDisplayedImg(firstImage)}
         onClick={() => navigate(`/product/${id}`)}
       />
       <CardContent>
