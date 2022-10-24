@@ -16,16 +16,16 @@ const lettersOnly = /^[a-ząčęėįšųūž ]+$/i;
 const phoneRegExp = /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/;
 const yesterday = moment().subtract(1, 'days');
 
-const procedures = [
-  {
-    value: 'thaiMassage',
-    label: 'Thai massage',
-  },
-  {
-    value: 'swedishMassage',
-    label: 'Swedish massage',
-  },
-];
+// const procedures = [
+//   {
+//     value: 'thaiMassage',
+//     label: 'Thai massage',
+//   },
+//   {
+//     value: 'swedishMassage',
+//     label: 'Swedish massage',
+//   },
+// ];
 
 const bookTimes = ['09:00', '09:30', '10:00', '10:30', '11:00', '11:30', '12:00', '12:30', '13:00', '13:30', '14:00', '14:30', '15:00', '15:30', '16:00', '16:30', '17:00', '17:30', '18:00', '18:30', '19:00', '19:30'];
 
@@ -58,6 +58,14 @@ const validationSchema = yup.object({
 });
 
 const OnlineReservationPage = () => {
+  const [treatments, setTreatments] = React.useState([]);
+
+  React.useEffect(() => {
+    fetch('http://localhost:8000/services')
+      .then((res) => res.json())
+      .then((fetchedTreatments) => setTreatments(fetchedTreatments));
+  }, []);
+
   const onSubmit = async (values) => {
     console.log('Form is confirmed');
     console.log(values);
@@ -110,8 +118,18 @@ const OnlineReservationPage = () => {
             error={touched.procedure && Boolean(errors.procedure)}
             helperText={touched.procedure && errors.procedure}
           >
-            {procedures.map(
-              ({ value, label }) => <MenuItem key={value} value={value}>{label}</MenuItem>,
+            {treatments.map(
+              ({
+                id, title, value, price,
+              }) => (
+                <MenuItem key={id} value={value}>
+                  {title}
+                  {' '}
+                  -
+                  {' '}
+                  {price}
+                </MenuItem>
+              ),
             )}
           </TextField>
           <TextField

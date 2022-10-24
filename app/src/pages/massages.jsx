@@ -20,7 +20,7 @@ const MassagesPage = () => {
       .then((fetchedTreatments) => setTreatments(fetchedTreatments));
   }, []);
 
-  const massages = treatments.filter((tratment) => tratment.category === 'massage');
+  const massages = treatments.filter((treatment) => treatment.category === 'massage');
   const handleChange = (panel) => (isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };

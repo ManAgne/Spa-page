@@ -64,7 +64,7 @@ const ProductContent = ({ product }) => {
             </Button>
           </Box>
         </Box>
-        <Button variant="contained" size="large" onClick={() => addToCart({ product.id, count })}>Add to cart</Button>
+        <Button variant="contained" size="large" onClick={() => addToCart({ product, count })}>Add to cart</Button>
       </Box>
     </Box>
   );
