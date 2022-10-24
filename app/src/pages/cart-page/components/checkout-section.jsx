@@ -4,7 +4,7 @@ import {
 } from '@mui/material';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import Image from '../../../components/image';
-import CartContext from '../../../contexts/cart-context';
+import useCart from '../../../hooks/useCart';
 
 const fetchItem = async ({ id, count }) => {
   const response = await fetch(`http://localhost:8000/products/${id}`);
@@ -25,7 +25,7 @@ const fetchCartItems = async (cartItems) => {
 const CheckoutSection = () => {
   const {
     cartItems: cartItemsData,
-  } = React.useContext(CartContext);
+  } = useCart();
   const [cartItems, setCartItems] = React.useState([]);
 
   React.useEffect(() => {

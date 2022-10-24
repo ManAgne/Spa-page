@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Box, Typography } from '@mui/material';
 import Product from './components/product';
-import CartContext from '../../../../contexts/cart-context';
+import useCart from '../../../../hooks/useCart';
 
 const fetchItem = async ({ id, count }) => {
   const response = await fetch(`http://localhost:8000/products/${id}`);
@@ -24,7 +24,7 @@ const ListSection = () => {
     cartItems: cartItemsData,
     addToCart,
     deleteItem,
-  } = React.useContext(CartContext);
+  } = useCart();
   const [cartItems, setCartItems] = React.useState([]);
 
   React.useEffect(() => {

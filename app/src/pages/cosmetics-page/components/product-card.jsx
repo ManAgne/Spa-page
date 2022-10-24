@@ -11,7 +11,7 @@ import {
 import FavoriteRoundedIcon from '@mui/icons-material/FavoriteRounded';
 import FavoriteBorderRoundedIcon from '@mui/icons-material/FavoriteBorderRounded';
 import { useNavigate } from 'react-router-dom';
-import CartContext from '../../../contexts/cart-context';
+import useCart from '../../../hooks/useCart';
 
 const ProductCard = ({
   id,
@@ -25,7 +25,7 @@ const ProductCard = ({
   const [displayedImg, setDisplayedImg] = React.useState(img);
 
   const navigate = useNavigate();
-  const { addToCart } = React.useContext(CartContext);
+  const { addToCart } = useCart();
   const count = 1;
 
   return (

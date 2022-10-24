@@ -2,12 +2,12 @@ import * as React from 'react';
 import {
   Box, Button, OutlinedInput, Typography,
 } from '@mui/material';
-// import CartContext from '../../contexts/cart-context';
+import useCart from '../../hooks/useCart';
 import Image from '../../components/image';
 
 const ProductContent = ({ product }) => {
   const [count, setCount] = React.useState(1);
-  // const { addToCart } = React.useContext(CartContext);
+  const { addToCart } = useCart();
 
   return (
     <Box sx={{ display: 'flex', py: 3 }}>
@@ -47,7 +47,6 @@ const ProductContent = ({ product }) => {
                   padding: 0, textAlign: 'center',
                 },
                 value: count,
-                onChange: (e) => setCount(e.target.value),
               }}
               sx={{
                 borderRadius: 0, width: 120, minWidth: 0, height: 40, alignSelf: 'center',
@@ -65,12 +64,10 @@ const ProductContent = ({ product }) => {
             </Button>
           </Box>
         </Box>
-        <Button variant="contained" size="large">Add to cart</Button>
+        <Button variant="contained" size="large" onClick={() => addToCart({ product.id, count })}>Add to cart</Button>
       </Box>
     </Box>
   );
 };
-
-// onClick={() => addToCart({ product.id, count })}
 
 export default ProductContent;

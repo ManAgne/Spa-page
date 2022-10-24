@@ -4,8 +4,8 @@ import {
   Container,
   Alert,
 } from '@mui/material';
-import ProductService from '../../services/product-service';
 import ProductContent from './product-content';
+import ProductService from '../../services/product-service';
 
 const ProductPage = () => {
   const { productId } = useParams();
