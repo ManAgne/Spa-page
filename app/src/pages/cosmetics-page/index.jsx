@@ -34,6 +34,7 @@ const CosmeticsPage = () => {
           id,
           title,
           price,
+          images,
           img,
           liked,
         }) => (
@@ -42,6 +43,7 @@ const CosmeticsPage = () => {
               id={id}
               title={title}
               price={price}
+              images={images}
               img={img}
               liked={liked}
               updateProduct={handleUpdateProduct}
