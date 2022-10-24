@@ -38,7 +38,7 @@ const CheckoutSection = () => {
 
   const subtotal = cartItems.reduce((prevSum, { count, price }) => prevSum + count * price, 0);
   const minOrderForFreeDelivery = 100;
-  const deliveryCharge = 5;
+  const deliveryCharge = 15;
   const freeDelivery = 0;
 
   return (
@@ -48,7 +48,7 @@ const CheckoutSection = () => {
     >
       <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
         <Typography variant="h5" sx={{ fontWeight: 'bold' }}>Total</Typography>
-        {subtotal < minOrderForFreeDelivery ? (
+        {subtotal < minOrderForFreeDelivery && subtotal !== 0 ? (
           <Typography variant="h5" sx={{ fontWeight: 'bold' }}>
             {`${subtotal + deliveryCharge}`}
             {' '}
@@ -79,7 +79,7 @@ const CheckoutSection = () => {
             <InfoOutlinedIcon sx={{ fontSize: '15px' }} />
           </Tooltip>
         </Typography>
-        {subtotal < minOrderForFreeDelivery !== 0 ? (
+        {subtotal < minOrderForFreeDelivery && subtotal !== 0 ? (
           <Typography variant="h6">
             {deliveryCharge}
             {' '}
