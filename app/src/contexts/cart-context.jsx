@@ -1,9 +1,10 @@
 import * as React from 'react';
+import useLocalStorage from '../hooks/useLocalStorage';
 
 const CartContext = React.createContext();
 
 export const CartProvider = ({ children }) => {
-  const [cartItems, setCartItems] = React.useState([]);
+  const [cartItems, setCartItems] = useLocalStorage('cartItems', []);
 
   const cartContextValue = React.useMemo(() => ({
     cartItems,
@@ -22,7 +23,7 @@ export const CartProvider = ({ children }) => {
     subtotalAmount: cartItems.reduce((prevSum, { count, price }) => prevSum + count * price, 0),
 
     deleteItem: (id) => setCartItems(cartItems.filter((x) => x.id !== id)),
-  }), [cartItems]);
+  }), [cartItems, setCartItems]);
 
   return (
     <CartContext.Provider value={cartContextValue}>{children}</CartContext.Provider>
