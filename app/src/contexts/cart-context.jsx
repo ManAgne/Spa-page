@@ -19,7 +19,7 @@ export const CartProvider = ({ children }) => {
 
     cartItemsCount: cartItems.reduce((sum, { count }) => sum + count, 0),
 
-    getSubtotal: cartItems.reduce((prevSum, { count, price }) => prevSum + count * price, 0),
+    subtotalAmount: cartItems.reduce((prevSum, { count, price }) => prevSum + count * price, 0),
 
     deleteItem: (id) => setCartItems(cartItems.filter((x) => x.id !== id)),
   }), [cartItems]);
