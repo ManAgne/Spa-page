@@ -14,7 +14,7 @@ import { BackgroundImage, PageTitle } from '../../components';
 
 const lettersOnly = /^[a-ząčęėįšųūž ]+$/i;
 const phoneRegExp = /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/;
-const dateNow = moment().subtract(1, 'days');
+const yesterday = moment().subtract(1, 'days');
 
 const procedures = [
   {
@@ -52,7 +52,7 @@ const validationSchema = yup.object({
     .matches(phoneRegExp, 'Phone number is not valid'),
   date: yup.date('Format should be YYYY/MM/DD')
     .required('Required')
-    .min(dateNow, 'Cannot be past date'),
+    .min(yesterday, 'Cannot be past date'),
   time: yup.string()
     .required('Required'),
 });
