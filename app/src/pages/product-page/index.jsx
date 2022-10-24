@@ -4,7 +4,7 @@ import {
   Container,
   Alert,
 } from '@mui/material';
-import ProductContent from './product-content';
+import ProductContent from './components/product-content';
 import ProductService from '../../services/product-service';
 
 const ProductPage = () => {

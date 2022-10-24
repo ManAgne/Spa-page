@@ -2,8 +2,8 @@ import * as React from 'react';
 import {
   Box, Button, OutlinedInput, Typography,
 } from '@mui/material';
-import useCart from '../../hooks/useCart';
-import Image from '../../components/image';
+import useCart from '../../../hooks/useCart';
+import Image from '../../../components/image';
 
 const ProductContent = ({ product }) => {
   const [count, setCount] = React.useState(1);
@@ -64,7 +64,7 @@ const ProductContent = ({ product }) => {
             </Button>
           </Box>
         </Box>
-        <Button variant="contained" size="large" onClick={() => addToCart({ product, count })}>Add to cart</Button>
+        <Button variant="contained" size="large" onClick={() => addToCart({ id: product.id, count })}>Add to cart</Button>
       </Box>
     </Box>
   );
