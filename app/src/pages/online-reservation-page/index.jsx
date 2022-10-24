@@ -15,17 +15,7 @@ import { BackgroundImage, PageTitle } from '../../components';
 const lettersOnly = /^[a-ząčęėįšųūž ]+$/i;
 const phoneRegExp = /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/;
 const yesterday = moment().subtract(1, 'days');
-
-// const procedures = [
-//   {
-//     value: 'thaiMassage',
-//     label: 'Thai massage',
-//   },
-//   {
-//     value: 'swedishMassage',
-//     label: 'Swedish massage',
-//   },
-// ];
+const twoWeeksAhead = moment().add(2, 'weeks');
 
 const bookTimes = ['09:00', '09:30', '10:00', '10:30', '11:00', '11:30', '12:00', '12:30', '13:00', '13:30', '14:00', '14:30', '15:00', '15:30', '16:00', '16:30', '17:00', '17:30', '18:00', '18:30', '19:00', '19:30'];
 
@@ -52,7 +42,8 @@ const validationSchema = yup.object({
     .matches(phoneRegExp, 'Phone number is not valid'),
   date: yup.date('Format should be YYYY/MM/DD')
     .required('Required')
-    .min(yesterday, 'Cannot be past date'),
+    .min(yesterday, 'Cannot be past date')
+    .max(twoWeeksAhead, 'Cannot be more than 2 weeks ahead'),
   time: yup.string()
     .required('Required'),
 });
