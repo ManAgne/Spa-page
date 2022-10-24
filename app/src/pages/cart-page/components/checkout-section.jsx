@@ -37,6 +37,7 @@ const CheckoutSection = () => {
   }, [cartItemsData]);
 
   const subtotal = cartItems.reduce((prevSum, { count, price }) => prevSum + count * price, 0);
+  const minOrderForFreeDelivery = 100;
   const deliveryCharge = 5;
   const freeDelivery = 0;
 
@@ -47,7 +48,7 @@ const CheckoutSection = () => {
     >
       <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
         <Typography variant="h5" sx={{ fontWeight: 'bold' }}>Total</Typography>
-        {subtotal < 50 && subtotal !== 0 ? (
+        {subtotal < minOrderForFreeDelivery ? (
           <Typography variant="h5" sx={{ fontWeight: 'bold' }}>
             {`${subtotal + deliveryCharge}`}
             {' '}
@@ -74,11 +75,11 @@ const CheckoutSection = () => {
       <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
         <Typography variant="h6">
           Delivery
-          <Tooltip title="Free delivery on orders 50€ and above">
+          <Tooltip title="Free delivery on orders 100€ and above">
             <InfoOutlinedIcon sx={{ fontSize: '15px' }} />
           </Tooltip>
         </Typography>
-        {subtotal < 50 && subtotal !== 0 ? (
+        {subtotal < minOrderForFreeDelivery !== 0 ? (
           <Typography variant="h6">
             {deliveryCharge}
             {' '}
