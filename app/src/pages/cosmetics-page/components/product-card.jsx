@@ -45,7 +45,7 @@ const ProductCard = ({
         width="100%"
         image={displayedImg}
         alt={title}
-        onMouseEnter={() => setDisplayedImg(secondImage)}
+        onMouseEnter={() => setDisplayedImg(secondImage || firstImage)}
         onMouseOut={() => setDisplayedImg(firstImage)}
         onClick={() => navigate(`/product/${id}`)}
       />
