@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {
-  Box, Button, OutlinedInput, Typography,
+  Box, Button, Card, OutlinedInput, Typography,
 } from '@mui/material';
 import useCart from '../../../hooks/useCart';
 import Image from '../../../components/image';
@@ -10,7 +10,7 @@ const ProductContent = ({ product }) => {
   const { addToCart } = useCart();
 
   return (
-    <Box sx={{ display: 'flex', py: 3 }}>
+    <Card sx={{ display: 'flex', p: 3, mt: 3 }}>
       <Box>
         <Image src={product.img} />
       </Box>
@@ -19,13 +19,13 @@ const ProductContent = ({ product }) => {
       }}
       >
         <Typography variant="h4" sx={{ mb: 2 }}>{product.title}</Typography>
-        <Typography variant="h6">{product.description}</Typography>
+        <Typography variant="h6" sx={{ mb: 2 }}>{product.description}</Typography>
         <Typography variant="h5" sx={{ mb: 3 }}>
           {product.price}
           {' '}
           €
         </Typography>
-        <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
+        <Box sx={{ display: 'flex', justifyContent: 'space-between', my: 1 }}>
           <Typography variant="h6" sx={{ alignSelf: 'center' }}>Quantity: </Typography>
           <Box sx={{ display: 'flex' }}>
             <Button
@@ -66,7 +66,7 @@ const ProductContent = ({ product }) => {
         </Box>
         <Button variant="contained" size="large" onClick={() => addToCart({ id: product.id, count })}>Add to cart</Button>
       </Box>
-    </Box>
+    </Card>
   );
 };
 
