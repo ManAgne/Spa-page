@@ -1,14 +1,9 @@
 import * as React from 'react';
 import {
   Box,
-  Accordion,
-  AccordionSummary,
-  AccordionDetails,
-  Typography,
   Card,
 } from '@mui/material';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { PageTitle } from '../../components';
+import { PageTitle, TreatmentsAccordion } from '../../components';
 
 const MassagesPage = () => {
   const [treatments, setTreatments] = React.useState([]);
@@ -50,30 +45,15 @@ const MassagesPage = () => {
           price,
         }) => (
 
-          <Accordion
+          <TreatmentsAccordion
             key={id}
             expanded={expanded === id}
             onChange={handleChange(id)}
-          >
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel1a-content"
-              id="panel1a-header"
-              sx={{ display: 'flex ', justifyContent: 'space-between' }}
-            >
-              <Typography sx={{ width: '33%', flexShrink: 0 }}>{title}</Typography>
-              <Typography>
-                {duration}
-                {' '}
-                /
-                {' '}
-                {price}
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography>{description}</Typography>
-            </AccordionDetails>
-          </Accordion>
+            title={title}
+            duration={duration}
+            price={price}
+            description={description}
+          />
         ))}
       </Card>
     </Box>

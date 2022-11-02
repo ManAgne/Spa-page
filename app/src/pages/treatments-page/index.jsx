@@ -1,12 +1,11 @@
 import * as React from 'react';
 import {
-  Box, Card, CardActionArea, CardContent, CardMedia, Typography, useMediaQuery,
+  Box, useMediaQuery,
 } from '@mui/material';
 import { BackgroundImage, PageTitle } from '../../components';
-import { Link } from '../../components/navbar/components';
+import TreatmentCard from './components/treatment-card';
 
 const TreatmentsPage = () => {
-  const belowMdScreen = useMediaQuery((theme) => theme.breakpoints.down('md'));
   const belowSmScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
 
   return (
@@ -31,75 +30,43 @@ const TreatmentsPage = () => {
           }}
           flexDirection={belowSmScreen ? 'column' : 'row'}
         >
-          <Link to="/treatments/massages">
-            <Card sx={{ maxWidth: 350, height: '101%' }}>
-              <CardActionArea>
-                <CardMedia
-                  component="img"
-                  height={belowMdScreen ? '100' : '170'}
-                  image="massage.jpg"
-                  alt="treatments"
-                />
-                <CardContent>
-                  <Typography gutterBottom variant={belowMdScreen ? 'h7' : 'h5'} component="div">
-                    Massages
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary" display={belowMdScreen ? 'none' : 'inline'}>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
-                    voluptates consectetur aliquid ipsum cumque dolor, qui doloremque
-                    atque error a quae excepturi animi obcaecati culpa, quis accusamus
-                    veniam adipisci dolorem.
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-          </Link>
-          <Link to="/treatments/facial">
-            <Card sx={{ maxWidth: 350, height: '101%' }}>
-              <CardActionArea>
-                <CardMedia
-                  component="img"
-                  height={belowMdScreen ? '100' : '170'}
-                  image="facial.jpg"
-                  alt="treatments"
-                />
-                <CardContent>
-                  <Typography gutterBottom variant={belowMdScreen ? 'h7' : 'h5'} component="div">
-                    Facial Treatments
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary" display={belowMdScreen ? 'none' : 'inline'}>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Cum dolor unde, error aliquam ratione iste. Necessitatibus
-                    reiciendis quas, voluptatem saepe soluta cum libero in maxime
-                    expedita, amet ipsa, ex laboriosam.
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-          </Link>
-          <Link to="/treatments/rituals">
-            <Card sx={{ maxWidth: 350, height: '101%' }}>
-              <CardActionArea>
-                <CardMedia
-                  component="img"
-                  height={belowMdScreen ? '100' : '170'}
-                  image="ritual.jpg"
-                  alt="treatments"
-                />
-                <CardContent>
-                  <Typography gutterBottom variant={belowMdScreen ? 'h7' : 'h5'} component="div">
-                    Spa Rituals
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary" display={belowMdScreen ? 'none' : 'inline'}>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum
-                    beatae veritatis perferendis ex debitis iure quod cupiditate!
-                    Voluptate omnis molestiae laborum, aliquid aspernatur magnam,
-                    dolores repudiandae dolor quisquam nobis deserunt!
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-          </Link>
+          <TreatmentCard
+            to="/treatments/massages"
+            image="massage.jpg"
+            alt="massages"
+            title="Massages"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Provident labore eum iste, quam suscipit voluptatum sapiente
+            culpa odio autem pariatur minima, nobis cupiditate soluta
+            cumque rerum doloremque iure quia ducimus.
+
+          </TreatmentCard>
+          <TreatmentCard
+            to="/treatments/facial"
+            image="facial.jpg"
+            alt="facial"
+            title="Facial treatments"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Provident labore eum iste, quam suscipit voluptatum sapiente
+            culpa odio autem pariatur minima, nobis cupiditate soluta
+            cumque rerum doloremque iure quia ducimus.
+
+          </TreatmentCard>
+          <TreatmentCard
+            to="/treatments/rituals"
+            image="ritual.jpg"
+            alt="rituals"
+            title="Spa rituals"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Provident labore eum iste, quam suscipit voluptatum sapiente
+            culpa odio autem pariatur minima, nobis cupiditate soluta
+            cumque rerum doloremque iure quia ducimus.
+
+          </TreatmentCard>
+
         </Box>
       </Box>
     </Box>
