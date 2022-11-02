@@ -28,7 +28,7 @@ const TreatmentsPage = () => {
             mt: 5,
             gap: 3,
           }}
-          flexDirection={belowSmScreen ? 'column' : 'row'}
+          flexDirection={belowSmScreen && 'column'}
         >
           <TreatmentCard
             to="/treatments/massages"

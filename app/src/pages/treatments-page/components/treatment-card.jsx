@@ -24,10 +24,10 @@ const TreatmentCard = ({
             alt={alt}
           />
           <CardContent>
-            <Typography gutterBottom variant={belowMdScreen ? 'h7' : 'h5'} component="div">
+            <Typography gutterBottom component="div">
               {title}
             </Typography>
-            <Typography variant="body2" color="text.secondary" display={belowMdScreen ? 'none' : 'inline'}>
+            <Typography variant="body2" color="text.secondary" display={belowMdScreen && 'none'}>
               {children}
             </Typography>
           </CardContent>

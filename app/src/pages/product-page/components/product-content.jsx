@@ -24,7 +24,7 @@ const ProductContent = ({ product }) => {
       }}
       >
         <Typography variant="h5" sx={{ mb: 2 }}>{product.title}</Typography>
-        <Typography variant="h7" sx={{ mb: 2 }}>{product.description}</Typography>
+        <Typography variant="h7" sx={{ mb: 2, textAlign: 'justify' }}>{product.description}</Typography>
         <Typography variant="h5" sx={{ mb: 3 }}>
           {product.price}
           {' '}

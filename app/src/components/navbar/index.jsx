@@ -38,7 +38,7 @@ const Navbar = () => {
   }, [isContracted]);
 
   return (
-    <AppBar position="static">
+    <AppBar position={isContracted && open ? 'fixed' : 'static'}>
       <Box sx={(theme) => theme.mixins.navbar}>
         <IconButton
           size="large"
@@ -59,7 +59,7 @@ const Navbar = () => {
         {isContracted && (
           <Drawer anchor="top" open={open} sx={{ zIndex: 1 }}>
             <Box sx={(theme) => ({
-              paddingTop: `calc(${theme.spacing(4)} + ${theme.mixins.navbar.height})`,
+              paddingTop: `calc(${theme.spacing(3)} + ${theme.mixins.navbar.height})`,
               paddingBottom: theme.spacing(4),
               display: 'flex',
               flexDirection: 'column',
@@ -82,7 +82,6 @@ const Navbar = () => {
 
               <Box sx={{ display: 'flex', alignSelf: 'stretch', flexDirection: 'column' }}>
                 <Nav.Link to="/cart" onClick={() => setOpen(false)} contracted>Shopping Bag</Nav.Link>
-                <Nav.Link to="/wishlist" onClick={() => setOpen(false)} contracted>Wishlist</Nav.Link>
                 <Nav.Link to="/login" onClick={() => setOpen(false)} contracted>Login</Nav.Link>
                 <Nav.Link to="/register" onClick={() => setOpen(false)} contracted>Sign up</Nav.Link>
               </Box>
