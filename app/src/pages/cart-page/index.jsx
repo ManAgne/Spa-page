@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, useMediaQuery } from '@mui/material';
 import { ListSection, CheckoutSection } from './components';
 import PageTitle from '../../components/page-title';
 import BackgroundImage from '../../components/background-image';
@@ -8,6 +8,7 @@ import { Link } from '../../components/navbar/components';
 
 const CartPage = () => {
   const { cartItemsCount } = useCart();
+  const belowLgScreen = useMediaQuery((theme) => theme.breakpoints.down('lg'));
 
   return (
     <Box sx={{
@@ -18,7 +19,19 @@ const CartPage = () => {
       <PageTitle>Your Shopping Bag</PageTitle>
       { cartItemsCount > 0
         ? (
-          <Box sx={{ display: 'flex', zIndex: 1 }}>
+          <Box sx={belowLgScreen
+            ? {
+              display: 'flex',
+              alignItems: 'center',
+              flexDirection: 'column',
+              zIndex: 1,
+            }
+            : {
+              display: 'flex',
+              justifyContent: 'center',
+              zIndex: 1,
+            }}
+          >
             <ListSection />
             <CheckoutSection />
           </Box>
@@ -27,7 +40,10 @@ const CartPage = () => {
           <Box sx={{ zIndex: 2 }}>
             <PageTitle>is empty :(</PageTitle>
             <Box sx={{
-              display: 'flex', justifyContent: 'center', fontSize: '25px', my: 5,
+              display: 'flex',
+              justifyContent: 'center',
+              fontSize: '25px',
+              my: 5,
             }}
             >
               <Link to="/cosmetics">Continue shopping</Link>

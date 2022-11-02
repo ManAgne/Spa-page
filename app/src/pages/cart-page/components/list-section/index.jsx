@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, useMediaQuery } from '@mui/material';
 import Product from './components/product';
 import useCart from '../../../../hooks/useCart';
 
@@ -35,14 +35,13 @@ const ListSection = () => {
     })();
   }, [cartItemsData]);
 
+  const belowLgScreen = useMediaQuery((theme) => theme.breakpoints.down('lg'));
   const subtotal = cartItems.reduce((prevSum, { count, price }) => prevSum + count * price, 0);
 
   return (
     <Box
       sx={{
         bgcolor: 'white',
-        width: '60%',
-        maxHeight: '400px',
         m: 1,
         p: 3,
         borderRadius: 1,
@@ -50,6 +49,8 @@ const ListSection = () => {
         flexDirection: 'column',
         justifyContent: 'space-between',
       }}
+      width={belowLgScreen ? '100%' : '75%'}
+      maxHeight={belowLgScreen ? '200px' : '400px'}
     >
       <Box sx={{ overflow: 'auto' }}>
         {cartItems.map(({
@@ -70,7 +71,7 @@ const ListSection = () => {
           />
         ))}
       </Box>
-      <Typography variant="h6" sx={{ textAlign: 'right', fontWeight: 'bold' }}>
+      <Typography variant={belowLgScreen ? 'h7' : 'h6'} sx={{ textAlign: 'right', fontWeight: 'bold' }}>
         Subtotal:
         {' '}
         {subtotal}

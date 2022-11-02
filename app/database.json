@@ -335,24 +335,6 @@
       "duration": "60 min."
     },
     {
-      "id": "4",
-      "title": "Black chocolate massage",
-      "value": "blackChocolateMassage",
-      "description": "Due to the rich contents of cacao fruits, tempting smell and infatuating taste, chocolate has been known as one of the most pleasant energizers and afrodisiacs for long time now, as well as the undeniable source of beauty and wellness. Used during relaxing and soothing massage, it not only moisturizes, regenerates and softens the skin, but also can cause slimming effect, shape and firm your body lines.",
-      "category": "massage",
-      "price": "70 €",
-      "duration": "60 min."
-    },
-    {
-      "id": "5",
-      "title": "Stimulating / toning massage",
-      "value": "stimulatingToningMassage",
-      "description": "Stimulating massage helps to recharge after a hard working day, stimulates activity of your organism, reduces fatigue and boosts your daily energy. It suites not only for active sportsmen, also for those, who constantly suffer from physical tension or stress, for those who want to recharge their energy after a big physical charge, intensive trainings, who want to strenghten and relax tired and tensed muscles ant to regain lost power.",
-      "category": "massage",
-      "price": "60 €",
-      "duration": "60 min."
-    },
-    {
       "id": "6",
       "title": "Deep tissue massage",
       "value": "deepTissueMassage",

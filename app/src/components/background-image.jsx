@@ -6,7 +6,13 @@ const BackgroundImage = () => (
     component="img"
     src="bg-image.jpg"
     sx={{
-      position: 'absolute', top: '80px', left: 0, width: '100%', height: '100vh', objectFit: 'cover', zIndex: 0,
+      position: 'absolute',
+      top: '80px',
+      left: 0,
+      width: '100%',
+      height: '100%',
+      objectFit: 'cover',
+      zIndex: 0,
     }}
   />
 );

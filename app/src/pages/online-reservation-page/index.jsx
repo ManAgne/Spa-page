@@ -5,6 +5,7 @@ import {
   Paper,
   Button,
   MenuItem,
+  useMediaQuery,
 } from '@mui/material';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
@@ -71,19 +72,30 @@ const OnlineReservationPage = () => {
     onSubmit,
   });
 
+  const belowSmScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
+
   return (
     <Box sx={{ pt: 3, display: 'flex', flexDirection: 'column' }}>
       <BackgroundImage />
       <PageTitle>Online Reservation</PageTitle>
       <Paper
         elevation={3}
-        sx={{
-          p: 3,
-          width: 400,
-          mx: 'auto',
-          bgcolor: 'white',
-          zIndex: 1,
-        }}
+        sx={belowSmScreen
+          ? {
+            width: '90%',
+            p: 2,
+            mx: 'auto',
+            bgcolor: 'white',
+            zIndex: 1,
+          }
+
+          : {
+            width: 400,
+            p: 3,
+            mx: 'auto',
+            bgcolor: 'white',
+            zIndex: 1,
+          }}
       >
         <Box
           component="form"

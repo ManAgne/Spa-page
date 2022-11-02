@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {
-  Box, Button, Divider, Typography, Tooltip,
+  Box, Button, Divider, Typography, Tooltip, useMediaQuery,
 } from '@mui/material';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import Image from '../../../components/image';
@@ -36,27 +36,36 @@ const CheckoutSection = () => {
     })();
   }, [cartItemsData]);
 
+  const belowLgScreen = useMediaQuery((theme) => theme.breakpoints.down('lg'));
   const subtotal = cartItems.reduce((prevSum, { count, price }) => prevSum + count * price, 0);
   const minOrderForFreeDelivery = 100;
   const deliveryCharge = 15;
   const freeDelivery = 0;
 
   return (
-    <Box sx={{
-      display: 'flex', flexDirection: 'column', bgcolor: 'white', width: '30%', height: 'min-content', m: 1, p: 3, borderRadius: 1,
-    }}
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        bgcolor: 'white',
+        height: 'min-content',
+        m: 1,
+        p: 3,
+        borderRadius: 1,
+      }}
+      width={belowLgScreen ? '100%' : '25%'}
     >
       <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
-        <Typography variant="h5" sx={{ fontWeight: 'bold' }}>Total</Typography>
+        <Typography variant={belowLgScreen ? 'h6' : 'h5'} sx={{ fontWeight: 'bold' }}>Total</Typography>
         {subtotal < minOrderForFreeDelivery && subtotal !== 0 ? (
-          <Typography variant="h5" sx={{ fontWeight: 'bold' }}>
+          <Typography variant={belowLgScreen ? 'h6' : 'h5'} sx={{ fontWeight: 'bold' }}>
             {`${subtotal + deliveryCharge}`}
             {' '}
             €
           </Typography>
         )
           : (
-            <Typography variant="h5" sx={{ fontWeight: 'bold' }}>
+            <Typography variant={belowLgScreen ? 'h6' : 'h5'} sx={{ fontWeight: 'bold' }}>
               {`${subtotal + freeDelivery}`}
               {' '}
               €
@@ -65,29 +74,29 @@ const CheckoutSection = () => {
       </Box>
       <Divider sx={{ m: 1 }} />
       <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
-        <Typography variant="h6">Subtotal</Typography>
-        <Typography variant="h6">
+        <Typography variant={belowLgScreen ? 'h7' : 'h6'}>Subtotal</Typography>
+        <Typography variant={belowLgScreen ? 'h7' : 'h6'}>
           {subtotal}
           {' '}
           €
         </Typography>
       </Box>
       <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
-        <Typography variant="h6">
+        <Typography variant={belowLgScreen ? 'h7' : 'h6'}>
           Delivery
           <Tooltip title="Free delivery on orders 100€ and above">
             <InfoOutlinedIcon sx={{ fontSize: '15px' }} />
           </Tooltip>
         </Typography>
         {subtotal < minOrderForFreeDelivery && subtotal !== 0 ? (
-          <Typography variant="h6">
+          <Typography variant={belowLgScreen ? 'h7' : 'h6'}>
             {deliveryCharge}
             {' '}
             €
           </Typography>
         )
           : (
-            <Typography variant="h6">
+            <Typography variant={belowLgScreen ? 'h7' : 'h6'}>
               {freeDelivery}
               {' '}
               €
