@@ -8,7 +8,6 @@ import Login from '../pages/login-page';
 import ProductPage from '../pages/product-page';
 import Register from '../pages/register-page';
 import TreatmentsPage from '../pages/treatments-page';
-import WishlistPage from '../pages/wishlist-page';
 import OnlineReservationPage from '../pages/online-reservation-page';
 import MassagesPage from '../pages/massages';
 import FacialPage from '../pages/facial';
@@ -24,7 +23,6 @@ const PageRoutes = () => (
     <Route path="/cosmetics" element={<CosmeticsPage />} />
     <Route path="/product/:productId" element={<ProductPage />} />
     <Route path="/reservation" element={<OnlineReservationPage />} />
-    <Route path="/wishlist" element={<WishlistPage />} />
     <Route path="/cart" element={<CartPage />} />
     <Route path="/login" element={<Login />} />
     <Route path="/register" element={<Register />} />

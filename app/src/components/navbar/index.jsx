@@ -10,7 +10,6 @@ import {
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
-import FavoriteRoundedIcon from '@mui/icons-material/FavoriteRounded';
 import SelfImprovementRoundedIcon from '@mui/icons-material/SelfImprovementRounded';
 import { useNavigate } from 'react-router-dom';
 import useCart from '../../hooks/useCart';
@@ -101,17 +100,6 @@ const Navbar = () => {
             }}
           >
             <SelfImprovementRoundedIcon />
-          </IconButton>
-
-          <IconButton
-            size="large"
-            color="inherit"
-            onClick={() => {
-              if (isContracted && open) setOpen(false);
-              navigate('/wishlist');
-            }}
-          >
-            <FavoriteRoundedIcon />
           </IconButton>
 
           <IconButton
