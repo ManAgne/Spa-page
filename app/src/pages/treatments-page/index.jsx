@@ -2,8 +2,8 @@ import * as React from 'react';
 import {
   Box, Card, CardActionArea, CardContent, CardMedia, Typography, useMediaQuery,
 } from '@mui/material';
-import { BackgroundImage, PageTitle } from '../components';
-import { Link } from '../components/navbar/components';
+import { BackgroundImage, PageTitle } from '../../components';
+import { Link } from '../../components/navbar/components';
 
 const TreatmentsPage = () => {
   const belowMdScreen = useMediaQuery((theme) => theme.breakpoints.down('md'));

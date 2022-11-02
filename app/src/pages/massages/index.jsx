@@ -8,7 +8,7 @@ import {
   Card,
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { PageTitle } from '../components';
+import { PageTitle } from '../../components';
 
 const MassagesPage = () => {
   const [treatments, setTreatments] = React.useState([]);
