@@ -3,7 +3,9 @@ import { Box, Grid } from '@mui/material';
 import { useSearchParams } from 'react-router-dom';
 import ProductService from '../../services/product-service';
 import wait from '../../helpers/wait';
-import { ProductCard, Filter } from './components';
+import { ProductCard, Filters } from './components';
+
+const drawerWidth = 320;
 
 const CosmeticsPage = () => {
   const [products, setProducts] = React.useState([]);
@@ -28,7 +30,7 @@ const CosmeticsPage = () => {
 
   return (
     <Box sx={{ display: 'flex', py: 3 }}>
-      <Filter />
+      <Filters drawerWidth={drawerWidth} />
       <Grid container spacing={3} sx={{ px: 5 }}>
         {products.map(({
           id,
@@ -37,7 +39,7 @@ const CosmeticsPage = () => {
           images,
           liked,
         }) => (
-          <Grid key={id} item xs={6} md={4} lg={3} sx={{ gridAutoRows: 'max-content' }}>
+          <Grid key={id} item xs={12} sm={6} md={4} xl={3} sx={{ gridAutoRows: 'max-content' }}>
             <ProductCard
               id={id}
               title={title}

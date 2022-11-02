@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {
-  Box, Button, Card, OutlinedInput, Typography,
+  Box, Button, Card, OutlinedInput, Typography, useMediaQuery,
 } from '@mui/material';
 import useCart from '../../../hooks/useCart';
 import Image from '../../../components/image';
@@ -8,9 +8,14 @@ import Image from '../../../components/image';
 const ProductContent = ({ product }) => {
   const [count, setCount] = React.useState(1);
   const { addToCart } = useCart();
+  const belowSmScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
 
   return (
-    <Card sx={{ display: 'flex', p: 3, mt: 3 }}>
+    <Card
+      sx={belowSmScreen ? {
+        display: 'flex', flexDirection: 'column', p: 3, mt: 3,
+      } : { display: 'flex', p: 3, mt: 3 }}
+    >
       <Box>
         <Image src={product.img} />
       </Box>
@@ -18,8 +23,8 @@ const ProductContent = ({ product }) => {
         display: 'flex', flexDirection: 'column', justifyContent: 'space-between', mx: 5,
       }}
       >
-        <Typography variant="h4" sx={{ mb: 2 }}>{product.title}</Typography>
-        <Typography variant="h6" sx={{ mb: 2 }}>{product.description}</Typography>
+        <Typography variant="h5" sx={{ mb: 2 }}>{product.title}</Typography>
+        <Typography variant="h7" sx={{ mb: 2 }}>{product.description}</Typography>
         <Typography variant="h5" sx={{ mb: 3 }}>
           {product.price}
           {' '}

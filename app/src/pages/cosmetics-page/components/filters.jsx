@@ -7,11 +7,12 @@ import { useSearchParams } from 'react-router-dom';
 import { AutoSelectField, CheckboxField, RangeField } from '../../../components';
 import CategoryService from '../../../services/category-service';
 import ProductTypeService from '../../../services/product-type-service';
+import FilterDrawer from './filter-drawer';
 
 const MIN = 0;
 const MAX = 50;
 
-const Filter = () => {
+const Filters = ({ drawerWidth }) => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [categories, setCategories] = React.useState([]);
   const [productTypes, setProductTypes] = React.useState([]);
@@ -69,32 +70,34 @@ const Filter = () => {
   }, []);
 
   return (
-    <Box sx={{ width: 300, p: 1 }}>
-      <Divider />
-      <RangeField
-        label="Price"
-        value={priceRange}
-        onChange={handlePriceRangeChange}
-        min={MIN}
-        max={MAX}
-      />
-      <Divider sx={{ my: 2 }} />
+    <FilterDrawer drawerWidth={drawerWidth}>
+      <Box sx={{ width: 300, p: 1 }}>
+        <Divider />
+        <RangeField
+          label="Price"
+          value={priceRange}
+          onChange={handlePriceRangeChange}
+          min={MIN}
+          max={MAX}
+        />
+        <Divider sx={{ my: 2 }} />
 
-      <AutoSelectField
-        options={categories}
-        value={category}
-        onChange={handleCategoryChange}
-      />
-      <Divider sx={{ my: 2 }} />
+        <AutoSelectField
+          options={categories}
+          value={category}
+          onChange={handleCategoryChange}
+        />
+        <Divider sx={{ my: 2 }} />
 
-      <CheckboxField
-        label="Product type"
-        options={productTypes}
-        value={selectedProductTypes}
-        onChange={handleProductTypesChange}
-      />
-    </Box>
+        <CheckboxField
+          label="Product type"
+          options={productTypes}
+          value={selectedProductTypes}
+          onChange={handleProductTypesChange}
+        />
+      </Box>
+    </FilterDrawer>
   );
 };
 
-export default Filter;
+export default Filters;
