@@ -82,7 +82,7 @@ const Product = ({
             >
               +
             </Button>
-            <Button sx={{ padding: 0, mx: -2 }}>
+            <Button sx={{ padding: 0 }} display={belowSmScreen && 'none'}>
               <DeleteForeverIcon sx={{ alignSelf: 'center', fontSize: '30px' }} onClick={deleteItem} />
             </Button>
           </Box>

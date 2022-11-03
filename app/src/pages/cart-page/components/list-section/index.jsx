@@ -3,8 +3,10 @@ import { Box, Typography, useMediaQuery } from '@mui/material';
 import Product from './components/product';
 import useCart from '../../../../hooks/useCart';
 
+const domain = process.env.REACT_APP_SERVER_ADDRESS;
+
 const fetchItem = async ({ id, count }) => {
-  const response = await fetch(`http://localhost:8000/products/${id}`);
+  const response = await fetch(`${domain}/products/${id}`);
   const item = await response.json();
 
   return {

@@ -13,6 +13,8 @@ import moment from 'moment';
 import { DesktopDatePicker } from '@mui/x-date-pickers';
 import { BackgroundImage, PageTitle } from '../../components';
 
+const domain = process.env.REACT_APP_SERVER_ADDRESS;
+
 const lettersOnly = /^[a-ząčęėįšųūž ]+$/i;
 const phoneRegExp = /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/;
 const yesterday = moment().subtract(1, 'days');
@@ -53,7 +55,7 @@ const OnlineReservationPage = () => {
   const [treatments, setTreatments] = React.useState([]);
 
   React.useEffect(() => {
-    fetch('http://localhost:8000/services')
+    fetch(`${domain}/services`)
       .then((res) => res.json())
       .then((fetchedTreatments) => setTreatments(fetchedTreatments));
   }, []);

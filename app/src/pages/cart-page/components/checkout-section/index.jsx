@@ -3,11 +3,13 @@ import {
   Box, Button, Divider, Typography, Tooltip, useMediaQuery,
 } from '@mui/material';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
-import Image from '../../../components/image';
-import useCart from '../../../hooks/useCart';
+import Image from '../../../../components/image';
+import useCart from '../../../../hooks/useCart';
+
+const domain = process.env.REACT_APP_SERVER_ADDRESS;
 
 const fetchItem = async ({ id, count }) => {
-  const response = await fetch(`http://localhost:8000/products/${id}`);
+  const response = await fetch(`${domain}/products/${id}`);
   const item = await response.json();
 
   return {

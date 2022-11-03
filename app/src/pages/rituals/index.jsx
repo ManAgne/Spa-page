@@ -5,12 +5,14 @@ import {
 } from '@mui/material';
 import { PageTitle, TreatmentsAccordion } from '../../components';
 
+const domain = process.env.REACT_APP_SERVER_ADDRESS;
+
 const RitualsPage = () => {
   const [treatments, setTreatments] = React.useState([]);
   const [expanded, setExpanded] = React.useState(false);
 
   React.useEffect(() => {
-    fetch('http://localhost:8000/services')
+    fetch(`${domain}/services`)
       .then((res) => res.json())
       .then((fetchedTreatments) => setTreatments(fetchedTreatments));
   }, []);
