@@ -9,9 +9,9 @@ import ProductPage from '../pages/product-page';
 import Register from '../pages/register-page';
 import TreatmentsPage from '../pages/treatments-page';
 import OnlineReservationPage from '../pages/online-reservation-page';
-import MassagesPage from '../pages/massages';
-import FacialPage from '../pages/facial';
-import RitualsPage from '../pages/rituals';
+import MassagesPage from '../pages/massages-page';
+import FacialPage from '../pages/facials-page';
+import RitualsPage from '../pages/rituals-page';
 
 const PageRoutes = () => (
   <Routes>
