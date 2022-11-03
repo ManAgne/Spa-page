@@ -108,7 +108,7 @@ const CheckoutSection = () => {
       <Divider sx={{ m: 1 }} />
       <Button variant="contained" sx={{ my: 2 }}>CHECKOUT</Button>
       <Typography variant="body2" sx={{ fontWeight: 'bold', mb: 1 }}>WE ACCEPT : </Typography>
-      <Image src="cc.png" sx={{ width: '15vw', objectFit: 'contain' }} />
+      <Image src="cc.png" sx={{ width: '200px', objectFit: 'contain' }} />
     </Box>
   );
 };
